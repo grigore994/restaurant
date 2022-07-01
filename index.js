@@ -14,6 +14,21 @@ function handleBurgerMenuFn() {
     }
 }
 
+//Implement functionality for carousel on "about" page
+let visitorReviewCarousel = document.querySelector('.carousel');
+let customersCardFlickity = new Flickity(visitorReviewCarousel, {
+    // options
+    cellalign: 'left',
+    pageDots: true,
+    // groupCells: '100%',
+    selectedAttraction: 0.03,
+    friction: 0.15,
+    initialIndex: 0,
+    autoPlay: true,
+    prevNextButtons: false,
+    // wrapAround:true
+});
+
 window.addEventListener('click', (mouseClick) => {
     let itemClicked = mouseClick.target;
     if (itemClicked.className === "main-category") {
