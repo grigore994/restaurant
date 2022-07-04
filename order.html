@@ -2,9 +2,596 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <link href="https://fonts.googleapis.com" rel="preconnect">
+      <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+      <link href="https://fonts.googleapis.com" rel="preconnect">
+      <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@1,700&display=swap"
+            rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
+            rel="stylesheet">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+      <link href="styles.css" rel="stylesheet">
       <title>Order</title>
    </head>
    <body>
+      <div class="wrapper order-wrapper">
+         <header class="header">
+            <div class="header-container row top-nav" id="myTopNav">
+               <div class="logo-container">
+                  <a href="index.html"> Logo</a>
+               </div>
 
+               <a class="icon" href="javascript:void(0);" onclick="handleBurgerMenuFn()">
+                  <i class="fa fa-bars" id="open-hamburger-menu-icon"></i>
+                  <i class="fas fa-times" id="close-hamburger-menu-icon"></i>
+               </a>
+
+               <div class="mnu-lang row top-lang">
+                  <a href="">RO</a>
+                  <a href="">RU</a>
+                  <a href="">EN</a>
+               </div>
+
+               <div class="mnu-list row">
+                  <div class="mnu-item">
+                     <a href="order.html">COMANDĂ ONLINE</a>
+                  </div>
+
+                  <div class="mnu-item">
+                     <a href="meniu.html">MENIU</a>
+                  </div>
+
+                  <div class="mnu-item">
+                     <a href="wines.html">VINURI</a>
+                  </div>
+
+                  <div class="mnu-item">
+                     <a href="gallery.html">GALERIE</a>
+                  </div>
+
+                  <div class="mnu-item">
+                     <a href="about.html">DESPRE NOI</a>
+                  </div>
+
+                  <div class="mnu-item">
+                     <a href="contacts.html">CONTACTE</a>
+                  </div>
+               </div>
+
+               <div class="media_lang row">
+                  <div class="mnu-social-media row">
+                     <img alt="Facebook_1.svg" src="img/facebook_1.svg">
+                     <img alt="Instagram.svg" src="img/instagram.svg">
+                     <img alt="YouTube.svg" src="img/youTube.svg">
+                     <img alt="TikTok.svg" src="img/tikTok.svg">
+                  </div>
+
+                  <div class="mnu-lang row">
+                     <a href="">RO</a>
+                     <a href="">RU</a>
+                     <a href="">EN</a>
+                  </div>
+               </div>
+            </div>
+         </header>
+
+         <div class="row main-row">
+            <section class="left-container column">
+               <div class="container-top-block column">
+                  <div class="block-img">
+                     <img src="img/Menu-img.svg" alt="Menu-img.svg">
+                  </div>
+                  <div class="block-title">MENIU</div>
+               </div>
+
+               <div class="categories-block">
+                  <div class="cat-block-title">Toate</div>
+
+                  <div class="main-cat-item">
+                     <div class="row title-row">
+                        <div class="main-title">Dejun</div>
+                        <div class="arrow-container">
+                           <i class="fa-solid fa-angle-down arrow"></i>
+                        </div>
+                     </div>
+
+                     <div class="secondary">
+                        <div class="secondary-title">
+                           Dejun
+                        </div>
+
+                        <div class="secondary-title">
+                           Gustari
+                        </div>
+
+                        <div class="secondary-title">
+                           Paste/Risotto
+                        </div>
+
+                        <div class="secondary-title">
+                           Salate
+                        </div>
+
+                        <div class="secondary-title">
+                           Supe
+                        </div>
+
+                        <div class="secondary-title">
+                           Carne
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="main-cat-item">
+                     <div class="row title-row">
+                        <div class="main-title">Bucate</div>
+                        <div class="arrow-container">
+                           <i class="fa-solid fa-angle-down arrow"></i>
+                        </div>
+                     </div>
+
+                     <div class="secondary">
+                        <div class="secondary-title">
+                           Dejun
+                        </div>
+
+                        <div class="secondary-title">
+                           Gustari
+                        </div>
+
+                        <div class="secondary-title">
+                           Paste/Risotto
+                        </div>
+
+                        <div class="secondary-title">
+                           Salate
+                        </div>
+
+                        <div class="secondary-title">
+                           Supe
+                        </div>
+
+                        <div class="secondary-title">
+                           Carne
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="main-cat-item">
+                     <div class="row title-row">
+                        <div class="main-title">Vinuri</div>
+                        <div class="arrow-container">
+                           <i class="fa-solid fa-angle-down arrow"></i>
+                        </div>
+                     </div>
+
+                     <div class="secondary">
+                        <div class="secondary-title">
+                           Dejun
+                        </div>
+
+                        <div class="secondary-title">
+                           Gustari
+                        </div>
+
+                        <div class="secondary-title">
+                           Paste/Risotto
+                        </div>
+
+                        <div class="secondary-title">
+                           Salate
+                        </div>
+
+                        <div class="secondary-title">
+                           Supe
+                        </div>
+
+                        <div class="secondary-title">
+                           Carne
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </section>
+
+            <section class="center-container column">
+               <div class="center-cont-item active">
+                  <div class="item-title-row row">
+                     <div class="order-item-title row">
+                        PIETP DE RATA CU PIURE SI TRUFE
+                     </div>
+                     <hr class="dots">
+                     <!--                     </hr>-->
+                     <div class="order-item-price">MDL 220</div>
+                  </div>
+
+                  <div class="item-desc-row row">
+                     Piept de rata suculent, pregatit medium, servit cu pireu
+                     de cartofi trufati si cu adaos de parmizan, ornamentat cu
+                     popcorn de orez.
+                  </div>
+
+                  <div class="item-total-row row">
+                     <div class="item-sign">NOU</div>
+                     <div class="item-total-block row">
+                        <!--                        todo: implement functionality for btn-->
+                        <div class="total-btn">
+                           <button class="decrease-btn">-</button>
+                        </div>
+
+                        <div class="total-items-nr">
+                           <input type="number" value="1"></input>
+                        </div>
+
+                        <div class="total-btn">
+                           <button class="increase-btn">+</button>
+                        </div>
+
+                        <div class="cart-bag">
+                           <img src="img/cartBag.svg" alt="cartBag.svg">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="center-cont-item">
+                  <div class="item-title-row row">
+                     <div class="item-title">
+                        PIETP DE RATA CU PIURE SI TRUFE
+                     </div>
+                     <div class="item-price">MDL 220</div>
+                  </div>
+
+                  <div class="item-desc-row row">
+                     Piept de rata suculent, pregatit medium, servit cu pireu
+                     de cartofi trufati si cu adaos de parmizan, ornamentat cu
+                     popcorn de orez.
+                  </div>
+
+                  <div class="item-total-row row">
+                     <div class="item-sign">BY CHEF</div>
+                     <div class="item-total-block row">
+                        <div class="total-btn">
+                           <button class="decrease-btn">-</button>
+                        </div>
+
+                        <div class="total-items-nr">
+                           <input type="number" value="2"></input>
+                        </div>
+
+                        <div class="total-btn">
+                           <button class="increase-btn">+</button>
+                        </div>
+
+                        <div class="cart-bag">
+                           <img src="img/cartBag.svg" alt="cartBag.svg">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="center-cont-item">
+                  <div class="item-title-row row">
+                     <div class="item-title">
+                        PIETP DE RATA CU PIURE SI TRUFE
+                     </div>
+                     <div class="item-price">MDL 220</div>
+                  </div>
+
+                  <div class="item-desc-row row">
+                     Piept de rata suculent, pregatit medium, servit cu pireu
+                     de cartofi trufati si cu adaos de parmizan, ornamentat cu
+                     popcorn de orez.
+                  </div>
+
+                  <div class="item-total-row row">
+                     <div class="item-sign">VEGAN</div>
+                     <div class="item-total-block row">
+                        <div class="total-btn">
+                           <button class="decrease-btn">-</button>
+                        </div>
+
+                        <div class="total-items-nr">
+                           <input type="number" value="0"></input>
+                        </div>
+
+                        <div class="total-btn">
+                           <button class="increase-btn">+</button>
+                        </div>
+
+                        <div class="cart-bag">
+                           <img src="img/cartBag.svg" alt="cartBag.svg">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="center-cont-item">
+                  <div class="item-title-row row">
+                     <div class="item-title">
+                        PIETP DE RATA CU PIURE SI TRUFE
+                     </div>
+                     <div class="item-price">MDL 220</div>
+                  </div>
+
+                  <div class="item-desc-row row">
+                     Piept de rata suculent, pregatit medium, servit cu pireu
+                     de cartofi trufati si cu adaos de parmizan, ornamentat cu
+                     popcorn de orez.
+                  </div>
+
+                  <div class="item-total-row row">
+                     <div class="item-sign">DE POST</div>
+                     <div class="item-total-block row">
+                        <div class="total-btn">
+                           <button class="decrease-btn">-</button>
+                        </div>
+
+                        <div class="total-items-nr">
+                           <input type="number" value="0"></input>
+                        </div>
+
+                        <div class="total-btn">
+                           <button class="increase-btn">+</button>
+                        </div>
+
+                        <div class="cart-bag">
+                           <img src="img/cartBag.svg" alt="cartBag.svg">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="center-cont-item">
+                  <div class="item-title-row row">
+                     <div class="item-title">
+                        PIETP DE RATA CU PIURE SI TRUFE
+                     </div>
+                     <div class="item-price">MDL 220</div>
+                  </div>
+
+                  <div class="item-desc-row row">
+                     Piept de rata suculent, pregatit medium, servit cu pireu
+                     de cartofi trufati si cu adaos de parmizan, ornamentat cu
+                     popcorn de orez.
+                  </div>
+
+                  <div class="item-total-row row">
+                     <div class="item-sign">BY CHEF</div>
+                     <div class="item-total-block row">
+                        <div class="total-btn">
+                           <button class="decrease-btn">-</button>
+                        </div>
+
+                        <div class="total-items-nr">
+                           <input type="number" value="0"></input>
+                        </div>
+
+                        <div class="total-btn">
+                           <button class="increase-btn">+</button>
+                        </div>
+
+                        <div class="cart-bag">
+                           <img src="img/cartBag.svg" alt="cartBag.svg">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            <section class="right-container column">
+               <div class="right-container-title">Detalii Comanda</div>
+
+               <div class="delivery-date-container">
+                  <div class="right-conteiner-block-title">Livrare</div>
+                  <div class="delivery-date-picker">
+                     <input type="datetime-local" id="#datePicker">
+                  </div>
+               </div>
+
+               <div class="ordered-items column">
+                  <div class="ordered-item row">
+
+                     <div class="ordered-item-img column">
+                        <img src="img/dish.svg" alt="dish.svg">
+                     </div>
+
+                     <div class="ordered-item-title column">
+                        <div class="ordered-item-name">
+                           <p>
+                              Piept de rata cu piure si cu trufe
+                           </p>
+                        </div>
+                        <div class="ordered-item-qty row">
+                           <div class="total-btn">
+                              <button class="decrease-btn">-</button>
+                           </div>
+
+                           <div class="total-items-nr">
+                              <input type="number" value="1"></input>
+                           </div>
+
+                           <div class="total-btn">
+                              <button class="increase-btn">+</button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="ordered-item-totals column">
+                        <div class="ordered-items-price">MDL 220</div>
+                        <div class="ordered-items-remove">
+                           <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="ordered-item row">
+
+                     <div class="ordered-item-img column">
+                        <img src="img/dish2.svg" alt="dish.svg">
+                     </div>
+
+                     <div class="ordered-item-title column">
+                        <div class="ordered-item-name">
+                           <p>
+                              Piept de rata cu piure si cu trufe
+                           </p>
+                        </div>
+                        <div class="ordered-item-qty row">
+                           <div class="total-btn">
+                              <button class="decrease-btn">-</button>
+                           </div>
+
+                           <div class="total-items-nr">
+                              <input type="number" value="1"></input>
+                           </div>
+
+                           <div class="total-btn">
+                              <button class="increase-btn">+</button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="ordered-item-totals column">
+                        <div class="ordered-items-price">MDL 220</div>
+                        <div class="ordered-items-remove">
+                           <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="ordered-item row">
+
+                     <div class="ordered-item-img column">
+                        <img src="img/dish.svg" alt="dish.svg">
+                     </div>
+
+                     <div class="ordered-item-title column">
+                        <div class="ordered-item-name">
+                           <p>
+                              Piept de rata cu piure si cu trufe
+                           </p>
+                        </div>
+                        <div class="ordered-item-qty row">
+                           <div class="total-btn">
+                              <button class="decrease-btn">-</button>
+                           </div>
+
+                           <div class="total-items-nr">
+                              <input type="number" value="1"></input>
+                           </div>
+
+                           <div class="total-btn">
+                              <button class="increase-btn">+</button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="ordered-item-totals column">
+                        <div class="ordered-items-price">MDL 220</div>
+                        <div class="ordered-items-remove">
+                           <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="ordered-item row">
+
+                     <div class="ordered-item-img column">
+                        <img src="img/dish2.svg" alt="dish.svg">
+                     </div>
+
+                     <div class="ordered-item-title column">
+                        <div class="ordered-item-name">
+                           <p>
+                              Piept de rata cu piure si cu trufe
+                           </p>
+                        </div>
+                        <div class="ordered-item-qty row">
+                           <div class="total-btn">
+                              <button class="decrease-btn">-</button>
+                           </div>
+
+                           <div class="total-items-nr">
+                              <input type="number" value="1"></input>
+                           </div>
+
+                           <div class="total-btn">
+                              <button class="increase-btn">+</button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="ordered-item-totals column">
+                        <div class="ordered-items-price">MDL 220</div>
+                        <div class="ordered-items-remove">
+                           <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="ordered-item row">
+
+                     <div class="ordered-item-img column">
+                        <img src="img/dish.svg" alt="dish.svg">
+                     </div>
+
+                     <div class="ordered-item-title column">
+                        <div class="ordered-item-name">
+                           <p>
+                              Piept de rata cu piure si cu trufe
+                           </p>
+                        </div>
+                        <div class="ordered-item-qty row">
+                           <div class="total-btn">
+                              <button class="decrease-btn">-</button>
+                           </div>
+
+                           <div class="total-items-nr">
+                              <input type="number" value="1"></input>
+                           </div>
+
+                           <div class="total-btn">
+                              <button class="increase-btn">+</button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="ordered-item-totals column">
+                        <div class="ordered-items-price">MDL 220</div>
+                        <div class="ordered-items-remove">
+                           <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="order-comment-container">
+                  <div class="right-conteiner-block-title" style="padding-bottom: 25px">Comentariu la comanda</div>
+                  <div class="comment-input">
+                     <textarea rows="10"></textarea>
+                  </div>
+               </div>
+
+               <div class="subtotal-container">
+                  <div class="subtotal-data row">
+                     <div class="subtotal-text">Subtotal</div>
+                     <div class="subtotal-price">MDL 450</div>
+                  </div>
+                  <div class="subtotal-btn">
+                     <button>Continuare</button>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </div>
+      <script src="https://kit.fontawesome.com/af38c7a6fc.js" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
    </body>
 </html>
