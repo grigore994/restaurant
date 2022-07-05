@@ -1243,9 +1243,81 @@ input.time-input {
   color: var(--darkness-grey);
 }
 
-/*.client-dlv-data input:not(:last-child){*/
-/* margin-bottom: 25px;*/
-/*}*/
+.img-row-1{
+    width: 100%;
+    height: 400px;
+}
+.img-row-1 .column-left {
+    flex: 0 1 35%;
+}
+.img-row-1 .column-right{
+    flex: 0 1 65%;
+}
+
+.img-row-2{
+    width: 100%;
+    height: 550px;
+}
+.img-row-2 .column-left {
+    flex: 0 1 53%;
+}
+.img-row-2 .column-right{
+    flex: 0 1 47%;
+}
+
+.img-row-3{
+    width: 100%;
+    height: 580px;
+}
+
+.img-row-4{
+    width: 100%;
+    height: 550px;
+}
+.img-row-4 .column-left {
+    flex: 0 1 47%;
+}
+.img-row-4 .column-right{
+    flex: 0 1 53%;
+}
+
+.img-row-5{
+    width: 100%;
+    height: 580px;
+}
+
+.img-row-6{
+    width: 100%;
+    height: 340px;
+}
+.img-row-6 .column-left {
+    flex: 0 1 68%;
+}
+.img-row-6 .column-right{
+    flex: 0 1 32%;
+}
+.column-center {
+    flex: 0 1 100%;
+}
+
+.column-left img{
+    width: border-box;
+    height: 100%;
+    /*object-fit: fill;*/
+
+}
+ .column-right img{
+    width: border-box;
+    height: 100%;
+}
+
+.column-center img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
 
 
 @media (max-width: 1400px) {
