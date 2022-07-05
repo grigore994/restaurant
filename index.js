@@ -1,5 +1,7 @@
 let datePicker = document.getElementById("#datePicker");
-datePicker.value = new Date(Date.now()).toISOString().slice(0,16);
+datePicker.value = new Date(Date.now()).toISOString().slice(0, 16);
+let timePicker = document.getElementById("timeInput");
+timePicker.value = new Date(Date.now()).toISOString().slice(11, 16);
 
 // Implement functionality for header/menu
 function handleBurgerMenuFn() {
@@ -17,7 +19,18 @@ function handleBurgerMenuFn() {
     }
 }
 
-//Implement functionality for carousel on "about" page
+let orderForm = document.getElementById("orderForm");
+let checkOutForm = document.getElementById("checkOutForm");
+
+orderForm.addEventListener('submit', handleSubmit);
+checkOutForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+    event.preventDefault();
+}
+
+
+// Implement functionality for carousel on "about" page
 // let visitorReviewCarousel = document.querySelector('.carousel');
 // let customersCardFlickity = new Flickity(visitorReviewCarousel, {
 //     // options
@@ -153,6 +166,44 @@ window.addEventListener('click', (mouseClick) => {
             }
         }
     }
+
+    if (itemClicked.className === "continue-btn") {
+        let x = itemClicked.parentElement;
+        let y = x.parentElement;
+        let z = y.parentElement;
+        let w = z.parentElement;
+        w.style.display = "none";
+        let checkOutContainer = document.getElementById("check-out-container");
+        checkOutContainer.style.display = "inherit";
+    }
+
+    if (itemClicked.className === "back-btn check-out-container-back-btn") {
+        document.getElementById("check-out-container").style.display = "none";
+        document.getElementById("shop-container").style.display = "inherit";
+
+    } else if (itemClicked.parentElement.className === "back-btn check-out-container-back-btn") {
+        document.getElementById("check-out-container").style.display = "none";
+        document.getElementById("shop-container").style.display = "inherit";
+    }
+
+    if (itemClicked.className === "back-btn complete-order-container-back-btn") {
+        document.getElementById("check-out-container").style.display = "inherit";
+        document.getElementById("complete-order-container").style.display = "none";
+    } else if (itemClicked.parentElement.className === "back-btn complete-order-container-back-btn") {
+        document.getElementById("check-out-container").style.display = "inherit";
+        document.getElementById("complete-order-container").style.display = "none";
+    }
+
+    if (itemClicked.className === "checkout-btn") {
+        let x = itemClicked.parentElement;
+        let y = x.parentElement;
+        let z = y.parentElement;
+        let w = z.parentElement;
+        w.style.display = "none";
+        let completeOrderContainer = document.getElementById("complete-order-container");
+        completeOrderContainer.style.display = "inherit";
+    }
+
 
     // if (itemClicked.className === "decrease-btn" || itemClicked.className === "increase-btn") {
     //     console.log(itemClicked.className);
