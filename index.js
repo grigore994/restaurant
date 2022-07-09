@@ -1,7 +1,3 @@
-let datePicker = document.getElementById("#datePicker");
-datePicker.value = new Date(Date.now()).toISOString().slice(0, 16);
-let timePicker = document.getElementById("timeInput");
-timePicker.value = new Date(Date.now()).toISOString().slice(11, 16);
 
 // Implement functionality for header/menu
 function handleBurgerMenuFn() {
@@ -10,29 +6,25 @@ function handleBurgerMenuFn() {
     let closeIcon = document.getElementById("close-hamburger-menu-icon");
     if (x.className === "header-container base-container row top-nav") {
         openIcon.style.display = "none";
+        x.style.backgroundColor = "#FFFFFF";
         closeIcon.style.display = "inherit";
         x.className += " responsive";
     } else {
         x.className = "header-container base-container row top-nav";
         openIcon.style.display = "inherit";
+        x.style.backgroundColor = "transparent";
         closeIcon.style.display = "none";
     }
 }
 
-let orderForm = document.getElementById("orderForm");
-let checkOutForm = document.getElementById("checkOutForm");
 
-orderForm.addEventListener('submit', handleSubmit);
-checkOutForm.addEventListener('submit', handleSubmit);
 
-function handleSubmit(event) {
-    event.preventDefault();
-}
+
 
 
 // Implement functionality for carousel on "about" page
 // let visitorReviewCarousel = document.querySelector('.carousel');
-// let customersCardFlickity = new Flickity(visitorReviewCarousel, {
+// var customersCardFlickity = new Flickity(visitorReviewCarousel, {
 //     // options
 //     cellalign: 'left',
 //     pageDots: true,
@@ -48,6 +40,15 @@ function handleSubmit(event) {
 window.addEventListener('click', (mouseClick) => {
     let itemClicked = mouseClick.target;
     console.log("was clicked: " + itemClicked.className)
+    if (itemClicked.className === "search-icon" || itemClicked.className === "search-icon-container") {
+        let input = document.getElementById("search-input");
+        if (input.style.display === "none") {
+            input.style.display = "inherit";
+        }else {
+            input.style.display = "none";
+        }
+    }
+
     if (itemClicked.className === "main-category") {
         let activeElement = document.getElementsByClassName("main-category active");
         activeElement[0].className = "main-category";
@@ -220,3 +221,17 @@ window.addEventListener('click', (mouseClick) => {
     // }
 
 });
+
+let datePicker = document.getElementById("#datePicker");
+datePicker.value = new Date(Date.now()).toISOString().slice(0, 16);
+let timePicker = document.getElementById("timeInput");
+timePicker.value = new Date(Date.now()).toISOString().slice(11, 16);
+
+let orderForm = document.getElementById("orderForm");
+let checkOutForm = document.getElementById("checkOutForm");
+
+orderForm.addEventListener('submit', handleSubmit);
+checkOutForm.addEventListener('submit', handleSubmit);
+function handleSubmit(event) {
+    event.preventDefault();
+}
