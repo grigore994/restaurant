@@ -29,6 +29,19 @@
                      <i class="fas fa-times" id="close-hamburger-menu-icon"></i>
                   </a>
 
+                  <div class="search-container row">
+                     <div class="search-icon-container" id="search-icon">
+                        <img src="img/search.svg" alt="search.svg" class="search-icon">
+                     </div>
+                     <div class="search-input-container" id="search-input">
+                        <input type="text" placeholder="search">
+                     </div>
+                  </div>
+
+                  <div class="card-container" id="card-icon">
+                     <img src="img/cartBag.svg" alt="cartBag.svg" class="card-icon">
+                  </div>
+
                   <div class="mnu-lang row top-lang">
                      <a href="">RO</a>
                      <a href="">RU</a>
@@ -139,10 +152,46 @@
             </div>
          </div>
 
-         <div class="map-container">
+         <div class="map-container map-container-desktop">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21758.881631978587!2d28.799777479101557!3d47.02334900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c3156a077e7%3A0x756c7441703b3450!2sMcDonald&#39;s!5e0!3m2!1sen!2s!4v1656673457749!5m2!1sen!2s"
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+
+         <div class="contacts-mobile column">
+            <div class="contacts-mobile-icon">
+               <img src="img/contactUs.svg" alt="img/contactUs.svg">
+            </div>
+            <div class="contacts-mobile-title">Contacte</div>
+            <div class="contacts-mobile-address-container">
+               <div class="address-street">str.Stefan cel Mare - Chisinau</div>
+               <div class="address-phone">+373 682 88 000</div>
+
+               <div class="address-title">Orar de lucru</div>
+               <div class="address-subtitle">Zilnic: 09:00-23:00</div>
+
+               <div class="address-title">Livrare mic dejun</div>
+               <div class="address-subtitle">
+                  <span style="margin-right: 20px">L/V-09:00-12:00</span>
+                  <span>S/D-09:00-13:00</span>
+               </div>
+            </div>
+
+            <div class="contacts-mobile-reservation column">
+               <div class="reservation-text">
+                  Pentru informatii suplimentare si rezervari va rugam sa ne contactati.
+               </div>
+               
+               <div class="reservation-icon">
+                  <img src="img/phone2.svg" alt="phone2.svg">
+               </div>
+            </div>
+
+            <div class="map-container map-container-mobile">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21758.881631978587!2d28.799777479101557!3d47.02334900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c3156a077e7%3A0x756c7441703b3450!2sMcDonald&#39;s!5e0!3m2!1sen!2s!4v1656673457749!5m2!1sen!2s"
+                       width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                       referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
          </div>
 
          <footer class="footer-container">
@@ -221,13 +270,13 @@
                   </div>
 
                   <div>
-                     <a href="">
+                     <a href="contacts.html">
                         <img src="img/geo-2.svg" alt="geo-2.svg">
                      </a>
                   </div>
 
                   <div>
-                     <a href="">
+                     <a href="order.html">
                         <img src="img/shop.svg" alt="shop.svg">
                      </a>
                   </div>
@@ -242,6 +291,7 @@
          </footer>
       </div>
 
+      <script crossorigin="anonymous" src="https://kit.fontawesome.com/af38c7a6fc.js"></script>
       <script src="index.js"></script>
    </body>
 </html>

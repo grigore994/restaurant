@@ -840,6 +840,90 @@ input, button, textarea, select {
     padding: 20px 0;
 }
 
+.contacts-mobile {
+    display: none;
+    margin: 65px 20px;
+    padding-top: 80px;
+    background-color: var(--gray);
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.contacts-mobile-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.reservation-icon img {
+    width: 72px;
+    height: 72px;
+}
+
+.contacts-mobile-title {
+    padding: 50px 0 60px 0;
+    font-size: 36px;
+    color: var(--dark-green);
+}
+
+.contacts-mobile-address-container {
+    padding: 80px 80px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.address-street {
+    font-size: 30px;
+    color: var(--dark-green);
+}
+
+.address-phone {
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 45px;
+}
+
+.address-title{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-size: 25px;
+    color: var(--green);
+}
+
+.address-subtitle{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.contacts-mobile-reservation{
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 30px 0;
+}
+
+.reservation-text{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.map-container-mobile{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .order-wrapper .header-container {
     box-shadow: none;
     background-color: var(--gray);
@@ -1257,11 +1341,6 @@ input.time-input {
     font-size: 12px;
 }
 
-.empty-space {
-    width: 100%;
-    height: 150px;
-}
-
 .complete-order-container {
     display: none;
 }
@@ -1414,21 +1493,23 @@ input.time-input {
     border-radius: 30px;
 }
 
-.mobile-food-cat{
+.mobile-food-cat {
     display: none;
 }
 
-.food-cat{
+.food-cat {
     position: relative;
     width: 400px;
     height: 220px;
 }
-.food-cat img{
+
+.food-cat img {
     border-radius: 20px;
     width: 400px;
     height: 220px;
 }
-.food-cat-name{
+
+.food-cat-name {
     position: absolute;
     top: 30%;
     left: 20%;
@@ -1440,11 +1521,11 @@ input.time-input {
     font-family: 'Playfair Display', serif;
 }
 
-.swiper{
+.swiper {
     width: 100%;
 }
 
-.swiper-slide{
+.swiper-slide {
     width: 400px;
 }
 
@@ -1454,10 +1535,20 @@ input.time-input {
 /*}*/
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
     .mnu-item {
         padding: 0 10px;
         text-align: center;
+    }
+
+    .footer {
+        padding: 150px 50px 0 50px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .footer-center {
+        max-width: 400px;
     }
 }
 
@@ -1487,12 +1578,21 @@ input.time-input {
     .sub-category {
         margin-bottom: 25px;
     }
+
+    .footer {
+        padding: 150px 20px 0 20px;
+    }
+
+    .footer-center {
+        margin-left: -60px;
+    }
 }
 
 @media (max-width: 1000px) {
-    .home-wrapper2{
+    .home-wrapper2 {
         display: none;
     }
+
     /*.menu-wrapper{*/
     /*    max-width: 1000px;*/
     /*}*/
@@ -1682,60 +1782,113 @@ input.time-input {
         max-width: 85%;
     }
 
-    .sub-menu-presentation{
+    .sub-menu-presentation {
         display: none;
     }
 
-    .mobile-food-cat{
+    .mobile-food-cat {
         padding-left: 20px;
         display: inherit;
     }
 
-    .special-mnu-header{
-        display: none;
-    }
-    .special-mnu{
+    .special-mnu-header {
         display: none;
     }
 
-    .empty-space{
-        height: 50px;
-        width: 100%;
-        background-color: #FFFFFF;
-        z-index: 10;
+    .special-mnu {
+        display: none;
+    }
+
+    .contacts-intro {
+        background-image: none;
+    }
+
+    .intro-title {
+        display: none;
+    }
+
+    .contacts-data {
+        display: none;
+    }
+
+    .map-container-desktop {
+        display: none;
+    }
+
+    .contacts-mobile {
+        display: inherit;
+    }
+
+}
+
+@media(max-width: 800px){
+    .reservation-text{
+        max-width: 500px;
+        padding: -10px 15px 0 15px;
     }
 }
+
+@media (max-width: 700px) {
+    .contacts-mobile-address-container{
+        padding: 50px 20px;
+    }
+}
+
 
 @media (max-width: 600px) {
     .mnu-items {
         padding-right: 40px;
     }
+
+    .address-street{
+        font-size: 20px;
+    }
+
+    .address-phone{
+        font-size: 23px;
+        padding-top: 30px;
+    }
+
+    .address-title{
+        font-size: 18px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .address-subtitle{
+        font-size: 15px;
+    }
 }
 
-@media(max-width: 500px){
-    .item-title{
+@media (max-width: 500px) {
+    .item-title {
         font-size: 14px;
     }
 
-    .item-price{
+    .item-price {
         font-size: 14px;
         text-align: right;
     }
 
-    .food-cat{
+    .food-cat {
         width: 250px;
         height: 150px;
     }
-    .food-cat img{
+
+    .food-cat img {
         width: 250px;
         height: 150px;
     }
-    .food-cat-name{}
-    .swiper-slide{
+
+    .food-cat-name {
+    }
+
+    .swiper-slide {
         width: 250px;
         height: 170px;
     }
-    .mnu-main-categories-list{
+
+    .mnu-main-categories-list {
         top: 540px;
     }
 
@@ -1751,6 +1904,59 @@ input.time-input {
         padding-right: 30px;
         left: 50px;
     }
+
+    .contacts-mobile-reservation{
+        padding: 30px 0 30px 0;
+    }
+
+    .reservation-text{
+        font-size: 15px;
+    }
+
+    .reservation-icon img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .map-container-mobile iframe{
+        height: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    .contacts-mobile{
+        margin: 35px 20px;
+        padding-top: 50px;
+    }
+
+    .contacts-mobile-title{
+        padding: 40px 0 40px 0;
+        font-size: 30px;
+    }
+
+    .contacts-mobile-address-container{
+        padding: 40px 10px;
+    }
+
+    .address-street{
+        font-size: 16px;
+    }
+
+    .address-phone{
+        font-size: 18px;
+        padding-top: 20px;
+    }
+
+    .address-title{
+        font-size: 18px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .address-subtitle{
+        font-size: 13px;
+    }
+
 }
 
 @media (max-width: 340px) {
@@ -1761,6 +1967,15 @@ input.time-input {
     .mnu-items {
         padding-right: 15px;
         left: 40px;
+    }
+
+    .reservation-icon img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .map-container-mobile iframe{
+        height: 200px;
     }
 }
 
