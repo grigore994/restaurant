@@ -18,7 +18,13 @@ function handleBurgerMenuFn() {
 }
 
 
-
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    spaceBetween:20,
+    slidesPerView:'auto',
+});
 
 
 
