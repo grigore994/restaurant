@@ -1,4 +1,3 @@
-
 // Implement functionality for header/menu
 function handleBurgerMenuFn() {
     let x = document.getElementById("myTopNav");
@@ -26,26 +25,31 @@ const swiper = new Swiper('.swiper', {
     slidesPerView:'auto',
 });
 
+const swiper2 = new Swiper('.swiper2', {
+    // modules:[Pagination],
+    // Optional parameters
+    direction: 'horizontal',
+    // loop: true,
+    // spaceBetween:20,
+    slidesPerView:1,
+    centeredSlides: true,
+    // fill: 'row',
 
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
 
-// Implement functionality for carousel on "about" page
-// let visitorReviewCarousel = document.querySelector('.carousel');
-// var customersCardFlickity = new Flickity(visitorReviewCarousel, {
-//     // options
-//     cellalign: 'left',
-//     pageDots: true,
-//     // groupCells: '100%',
-//     selectedAttraction: 0.03,
-//     friction: 0.15,
-//     initialIndex: 0,
-//     autoPlay: true,
-//     prevNextButtons: false,
-//     // wrapAround:true
-// });
+    autoplay: {
+        delay: 3000,
+    },
+});
+
 
 window.addEventListener('click', (mouseClick) => {
     let itemClicked = mouseClick.target;
     console.log("was clicked: " + itemClicked.className)
+
     if (itemClicked.className === "search-icon" || itemClicked.className === "search-icon-container") {
         let input = document.getElementById("search-input");
         if (input.style.display === "none") {
@@ -60,6 +64,32 @@ window.addEventListener('click', (mouseClick) => {
         activeElement[0].className = "main-category";
         itemClicked.className += " active";
     }
+
+    if (itemClicked.id === "tank-menu-cat-name") {
+        let activeElement = document.getElementsByClassName("mobile-presentation active");
+        activeElement[0].className = "mobile-presentation";
+        document.getElementById("namePresentation").className += " active";
+    }
+
+    if (itemClicked.id === "tank-menu-cat-family") {
+        let activeElement = document.getElementsByClassName("mobile-presentation active");
+        activeElement[0].className = "mobile-presentation";
+        document.getElementById("familyPresentation").className += " active";
+    }
+
+    if (itemClicked.id === "tank-menu-cat-baby-friendly") {
+        let activeElement = document.getElementsByClassName("mobile-presentation active");
+        activeElement[0].className = "mobile-presentation";
+        document.getElementById("babyPresentation").className += " active";
+    }
+
+    if (itemClicked.id === "tank-menu-cat-personal") {
+        let activeElement = document.getElementsByClassName("mobile-presentation active");
+        activeElement[0].className = "mobile-presentation";
+        document.getElementById("personalPresentation").className += " active";
+    }
+
+
 
     if (itemClicked.className === "sub-category") {
         let activeElement = document.getElementsByClassName("sub-category active");

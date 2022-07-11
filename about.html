@@ -11,8 +11,7 @@
             rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
             rel="stylesheet">
-      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
+      <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
       <link href="styles.css" rel="stylesheet">
       <title>About</title>
    </head>
@@ -29,6 +28,19 @@
                      <i class="fa fa-bars" id="open-hamburger-menu-icon"></i>
                      <i class="fas fa-times" id="close-hamburger-menu-icon"></i>
                   </a>
+
+                  <div class="search-container row">
+                     <div class="search-icon-container" id="search-icon">
+                        <img src="img/search.svg" alt="search.svg" class="search-icon">
+                     </div>
+                     <div class="search-input-container" id="search-input">
+                        <input type="text" placeholder="search">
+                     </div>
+                  </div>
+
+                  <div class="card-container" id="card-icon">
+                     <img src="img/cartBag.svg" alt="cartBag.svg" class="card-icon">
+                  </div>
 
                   <div class="mnu-lang row top-lang">
                      <a href="">RO</a>
@@ -108,47 +120,47 @@
                <div class="reviews-subtitle">CLIENȚILOR</div>
             </div>
 
-            <div class="carousel-wrapper">
-               <div class="carousel">
-                  <div class="carousel-cell client-review">
-                     <div class="review-text">
-                        Restaurantul arată superb, mi-a plăcut încă de la intrare.Personal foarte amabil
-                        și politicos, am fost întâlnită cu zâmbet pe buze. Servire de excepție, atmosferă super
-                        cool, mâncare excelentă și muzică foarte bună. Recomand caracatiță în stil sicilian.
-                        Restaurant este ideal pentru o ieșire în doi. M-am simțit foarte bine!
+            <div class="swiper2-container row">
+               <div class="swiper2">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                     <!-- Slides -->
+                     <div class="swiper-slide">
+                        <div class="client-review">
+                           <div class="review-text">
+                              Restaurantul arată superb, mi-a plăcut încă de la intrare.Personal foarte amabil
+                              și politicos, am fost întâlnită cu zâmbet pe buze. Servire de excepție, atmosferă super
+                              cool, mâncare excelentă și muzică foarte bună. Recomand caracatiță în stil sicilian.
+                              Restaurant este ideal pentru o ieșire în doi. M-am simțit foarte bine!
+                           </div>
+                           <div class="review-author">IRINA RIMEȘ</div>
+                        </div>
                      </div>
-                     <div class="review-author">IRINA RIMEȘ</div>
-                  </div>
-
-                  <div class="carousel-cell client-review">
-                     <div class="review-text">
-                        Restaurantul arată superb, mi-a plăcut încă de la intrare.Personal foarte amabil
-                        și politicos, am fost întâlnită cu zâmbet pe buze. Servire de excepție, atmosferă super
-                        cool, mâncare excelentă și muzică foarte bună. Recomand caracatiță în stil sicilian.
-                        Restaurant este ideal pentru o ieșire în doi. M-am simțit foarte bine!
+                     <div class="swiper-slide">
+                        <div class="client-review">
+                           <div class="review-text">
+                              Restaurantul arată superb, mi-a plăcut încă de la intrare.Personal foarte amabil
+                              și politicos, am fost întâlnită cu zâmbet pe buze. Servire de excepție, atmosferă super
+                              cool, mâncare excelentă și muzică foarte bună. Recomand caracatiță în stil sicilian.
+                              Restaurant este ideal pentru o ieșire în doi. M-am simțit foarte bine!
+                           </div>
+                           <div class="review-author">IRINA RIMEȘ</div>
+                        </div>
                      </div>
-                     <div class="review-author">IRINA RIMEȘ</div>
-                  </div>
-
-                  <div class="carousel-cell client-review">
-                     <div class="review-text">
-                        Restaurantul arată superb, mi-a plăcut încă de la intrare.Personal foarte amabil
-                        și politicos, am fost întâlnită cu zâmbet pe buze. Servire de excepție, atmosferă super
-                        cool, mâncare excelentă și muzică foarte bună. Recomand caracatiță în stil sicilian.
-                        Restaurant este ideal pentru o ieșire în doi. M-am simțit foarte bine!
+                     <div class="swiper-slide">
+                        <div class="client-review">
+                           <div class="review-text">
+                              Restaurantul arată superb, mi-a plăcut încă de la intrare.Personal foarte amabil
+                              și politicos, am fost întâlnită cu zâmbet pe buze. Servire de excepție, atmosferă super
+                              cool, mâncare excelentă și muzică foarte bună. Recomand caracatiță în stil sicilian.
+                              Restaurant este ideal pentru o ieșire în doi. M-am simțit foarte bine!
+                           </div>
+                           <div class="review-author">IRINA RIMEȘ</div>
+                        </div>
                      </div>
-                     <div class="review-author">IRINA RIMEȘ</div>
                   </div>
-
-                  <div class="carousel-cell client-review">
-                     <div class="review-text">
-                        Restaurantul arată superb, mi-a plăcut încă de la intrare.Personal foarte amabil
-                        și politicos, am fost întâlnită cu zâmbet pe buze. Servire de excepție, atmosferă super
-                        cool, mâncare excelentă și muzică foarte bună. Recomand caracatiță în stil sicilian.
-                        Restaurant este ideal pentru o ieșire în doi. M-am simțit foarte bine!
-                     </div>
-                     <div class="review-author">IRINA RIMEȘ</div>
-                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
                </div>
             </div>
          </section>
@@ -300,7 +312,87 @@
             </div>
          </footer>
       </div>
-      <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.js"></script>
+
+      <div class="home-wrapper home-wrapper2">
+         <header class="header">
+            <div class="header-container row top-nav" id="myTopNav2">
+               <div class="logo-container">
+                  <a href="index.html">
+                     Logo
+                  </a>
+               </div>
+
+               <a class="icon" href="javascript:void(0);" onclick="handleBurgerMenuFn()">
+                  <i class="fa fa-bars" id="open-hamburger-menu-icon2"></i>
+                  <i class="fas fa-times" id="close-hamburger-menu-icon2"></i>
+               </a>
+
+               <div class="mnu-lang row top-lang">
+                  <a href="">RO</a>
+                  <a href="">RU</a>
+                  <a href="">EN</a>
+               </div>
+
+               <div class="mnu-list row">
+                  <div class="mnu-item">
+                     <a href="order.html">COMANDĂ ONLINE</a>
+                  </div>
+
+                  <div class="mnu-item">
+                     <a href="meniu.html">MENIU</a>
+                  </div>
+
+                  <div class="mnu-item">
+                     <a href="wines.html">VINURI</a>
+                  </div>
+
+                  <div class="mnu-item">
+                     <a href="gallery.html">GALERIE</a>
+                  </div>
+
+                  <div class="mnu-item">
+                     <a href="about.html">DESPRE NOI</a>
+                  </div>
+
+                  <div class="mnu-item">
+                     <a href="contacts.html">CONTACTE</a>
+                  </div>
+               </div>
+
+               <div class="media_lang row">
+                  <div class="mnu-social-media row">
+                     <img src="img/facebook_1.svg" alt="Facebook_1.svg">
+                     <img src="img/instagram.svg" alt="Instagram.svg">
+                     <img src="img/youTube.svg" alt="YouTube.svg">
+                     <img src="img/tikTok.svg" alt="TikTok.svg">
+                  </div>
+
+                  <div class="mnu-lang row">
+                     <a href="">RO</a>
+                     <a href="">RU</a>
+                     <a href="">EN</a>
+                  </div>
+               </div>
+            </div>
+         </header>
+
+         <div class="column main">
+            <div class="main-categories row">
+               <div class="categories-item">
+                  <a href="">DEJUN</a>
+                  <a href="">BUCATE</a>
+                  <a href="">VINURI</a>
+               </div>
+            </div>
+
+            <div class="address">
+               str. Stefan cel Mare / Chișinău / +373 682 88 000
+            </div>
+         </div>
+      </div>
+
+      <script crossorigin="anonymous" src="https://kit.fontawesome.com/af38c7a6fc.js"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       <script src="index.js"></script>
    </body>
 </html>
