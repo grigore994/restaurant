@@ -159,6 +159,10 @@ input, button, textarea, select {
     padding: 0 25px 0 0;
 }
 
+.reviews-mobile-wrapper {
+    display: none;
+}
+
 .header {
     padding: 30px 35px;
 }
@@ -1563,14 +1567,14 @@ input.time-input {
     padding-bottom: 30px;
 }
 
-.swiper-pagination-bullet {
+.swiper2 .swiper-pagination-bullet {
     width: 1rem;
     height: 1rem;
     border: 3px solid var(--dark-gray);
     background-color: transparent;
 }
 
-.swiper-pagination-bullet-active {
+.swiper2 .swiper-pagination-bullet-active {
     background-color: var(--dark-gray);
 }
 
@@ -1871,6 +1875,7 @@ input.time-input {
 
     .about-us-mobile-wrapper {
         display: flex;
+        padding-bottom: 50px;
     }
 
     .tank-menu-cat-list {
@@ -1957,6 +1962,142 @@ input.time-input {
         display: none;
     }
 
+    .reviews-mobile-wrapper {
+        display: inherit;
+        padding-bottom: 150px;
+    }
+
+    .reviews-mobile-title {
+        font-size: 30px;
+        font-weight: bold;
+        padding: 50px 20px;
+    }
+
+    .reviews-slider-container {
+        padding: 0 20px;
+    }
+
+    .swiper3 {
+        width: 100%;
+        position: relative;
+    }
+
+    .swiper3 .swiper-wrapper {
+        position: relative;
+        /*width: 500px;*/
+        margin: 0 auto;
+    }
+
+    .swiper3 .swiper-slide {
+        /*!*margin: 0 auto;*!*/
+        width: 100%;
+        /*height: 100%;*/
+        /*height: 250px;*/
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .swiper3 .swiper-pagination {
+        position: relative;
+        bottom: -45px;
+    }
+
+    .swiper3 .swiper-pagination-bullet {
+        width: 1rem;
+        height: 1rem;
+        background-color: #CAD3BC;
+    }
+
+    .swiper3 .swiper-pagination-bullet-active {
+        background-color: var(--dark-green);
+    }
+
+    .mobile-client-review {
+        border-radius: 20px;
+        background-color: var(--gray);
+        padding: 30px 20px;
+
+    }
+
+    .quotes {
+
+    }
+
+    .quotes img {
+        width: 70px;
+        position: absolute;
+        right: 50px;
+        top: -30px;
+    }
+
+    .client-review-title {
+        font-size: 25px;
+        font-weight: bold;
+        padding-bottom: 30px;
+        line-height: 150%;
+        color: var(--green);
+    }
+
+    .client-review-paragraph {
+        padding-bottom: 25px;
+        font-size: 18px;
+        color: #6C6C6C;
+    }
+
+    .client-review-ratings {
+        padding: 10px 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .ratings-star i {
+        font-size: 25px;
+    }
+
+    .rating a,
+    .rating label {
+        float: right;
+        color: #aaa;
+        text-decoration: none;
+        -webkit-transition: color .4s;
+        -moz-transition: color .4s;
+        -o-transition: color .4s;
+        transition: color .4s;
+    }
+
+    .rating label:hover ~ label,
+    .rating label:hover,
+    .rating a:hover,
+    .rating a:hover ~ a,
+    .rating a:focus,
+    .rating a:focus ~ a {
+        color: orange;
+        cursor: pointer;
+    }
+
+    .rating {
+        direction: rtl;
+    }
+
+    .rating a {
+        float: none
+    }
+
+    .client-review-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        font-weight: bold;
+        color: var(--dark-green);
+    }
+
+    .reviews-mobile-news {
+        margin-top: 60px;
+    }
+
+    .news-title p {
+        color: var(--dark-green);
+    }
 }
 
 @media (max-width: 860px) {
@@ -1970,7 +2111,7 @@ input.time-input {
         width: 580px;
     }
 
-    .desc-paragraph{
+    .desc-paragraph {
         font-size: 17px;
         padding-bottom: 30px;
     }
@@ -1984,9 +2125,10 @@ input.time-input {
 }
 
 @media (max-width: 780px) {
-    .about-us-mobile-wrapper .mobile-presentation{
+    .about-us-mobile-wrapper .mobile-presentation {
         max-width: 700px;
     }
+
     .mobile-presentation .presentation-img img {
         position: relative;
         left: -30px;
@@ -2016,8 +2158,8 @@ input.time-input {
     }
 }
 
-@media(max-width: 630px){
-    .mobile-presentation-title{
+@media (max-width: 630px) {
+    .mobile-presentation-title {
         font-size: 23px;
     }
 }
@@ -2047,18 +2189,18 @@ input.time-input {
         font-size: 15px;
     }
 
-    .down-btn{
+    .down-btn {
         width: 75px;
         height: 75px;
         margin-bottom: -60px;
     }
 
-    .down-btn i{
+    .down-btn i {
         font-size: 25px;
     }
 }
 
-@media(max-width: 570px){
+@media (max-width: 570px) {
     .mobile-presentation .presentation-img img {
         left: 0;
         width: 280px;
@@ -2104,26 +2246,71 @@ input.time-input {
         top: 540px;
     }
 
+    .mobile-client-review {
+        padding: 15px 15px;
+    }
+
+    .quotes img {
+        width: 50px;
+        top: -20px;
+        right: 30px;
+
+    }
+
+    .client-review-title {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    .client-review-paragraph {
+        font-size: 14px;
+        padding-bottom: 15px;
+    }
+
+    .ratings-star i {
+        font-size: 18px;
+    }
+
+    .client-review-name {
+        font-size: 18px;
+    }
+
+    .swiper3 .swiper-pagination {
+        bottom: -120px;
+
+    }
+
+    .reviews-mobile-news {
+        margin-top: 120px;
+    }
+
+    .reviews-mobile-wrapper {
+        padding-bottom: 220px;
+
+    }
+
 }
 
-@media(max-width: 470px){
-    .tank-menu-cat-list{
+@media (max-width: 470px) {
+    .tank-menu-cat-list {
         top: 434px;
         left: -250px;
     }
 
-    .active.mobile-presentation{
+    .active.mobile-presentation {
         left: 80px;
     }
-    .about-us-mobile-wrapper .main-category{
+
+    .about-us-mobile-wrapper .main-category {
         font-size: 18px;
     }
 
-    .mobile-presentation-title{
+    .mobile-presentation-title {
         padding-top: 30px;
         padding-bottom: 20px;
         font-size: 20px;
     }
+
     .mobile-presentation .presentation-img img {
         left: -10px;
         width: 200px;
@@ -2136,14 +2323,25 @@ input.time-input {
         max-width: 200px;
     }
 
-    .desc-paragraph{
+    .desc-paragraph {
         font-size: 15px;
     }
 
-    .down-btn{
+    .down-btn {
         width: 60px;
         height: 60px;
         margin-bottom: -60px;
+    }
+}
+
+@media (max-width: 440px) {
+    .swiper3 .swiper-pagination {
+        bottom: -150px;
+
+    }
+
+    .reviews-mobile-news {
+        margin-top: 150px;
     }
 }
 
@@ -2210,6 +2408,10 @@ input.time-input {
         font-size: 13px;
     }
 
+    .reviews-mobile-wrapper {
+        padding-bottom: 250px;
+    }
+
 }
 
 @media (max-width: 340px) {
@@ -2231,41 +2433,52 @@ input.time-input {
         height: 200px;
     }
 
-    .tank-menu-cat-list{
+    .tank-menu-cat-list {
         left: -247px;
     }
 
-    .active.mobile-presentation{
+    .active.mobile-presentation {
         left: 50px;
         padding: 10px 10px 35px 10px;
     }
-    .about-us-mobile-wrapper .main-category{
+
+    .about-us-mobile-wrapper .main-category {
         font-size: 17px;
     }
 
-    .mobile-presentation-title{
+    .mobile-presentation-title {
         padding-top: 20px;
         padding-bottom: 20px;
         font-size: 20px;
     }
+
     .mobile-presentation .presentation-img img {
         left: 0px;
         width: 230px;
         height: 150px;
     }
 
-    .desc-paragraph{
+    .desc-paragraph {
         font-size: 15px;
     }
 
-    .down-btn{
+    .down-btn {
         width: 50px;
         height: 50px;
         margin-bottom: -60px;
     }
 
-    .down-btn i{
+    .down-btn i {
         font-size: 20px;
+    }
+
+    .swiper3 .swiper-pagination {
+        bottom: -180px;
+
+    }
+
+    .reviews-mobile-news {
+        margin-top: 170px;
     }
 }
 

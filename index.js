@@ -45,6 +45,27 @@ const swiper2 = new Swiper('.swiper2', {
     },
 });
 
+const swiper3 = new Swiper('.swiper3', {
+    // modules:[Pagination],
+    // Optional parameters
+    direction: 'horizontal',
+    // loop: true,
+    spaceBetween:20,
+    slidesPerView:1,
+    centeredSlides: true,
+    // fill: 'row',
+
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+
+    // autoplay: {
+    //     delay: 3000,
+    // },
+});
+
+
 
 window.addEventListener('click', (mouseClick) => {
     let itemClicked = mouseClick.target;
