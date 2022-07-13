@@ -104,9 +104,9 @@ window.addEventListener('click', (mouseClick) => {
         itemClicked.className += " active";
     }
 
-    if (itemClicked.className === "mobile-main-category") {
+    if (itemClicked.className === "mobile-type-category") {
         let activeElement = document.getElementsByClassName("mobile-type-category active");
-        activeElement[0].className = "mobile-main-category";
+        activeElement[0].className = "mobile-type-category";
         itemClicked.className += " active";
     }
 

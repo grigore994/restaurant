@@ -1612,18 +1612,26 @@ input.time-input {
     width: fit-content;
     height: fit-content;
 }
-
-.order-mobile-content-row .mnu-main-categories-list{
-    margin-right: 200px;
+.order-mobile-content-row{
+    position: relative;
 }
 
-.order-mobile-content-row .mnu-main-categories-list .main-category:first-child{
-    /*padding-: 100px;*/
-    background-color: #2B2B2B;
-}
+/*.order-mobile-content-row .mnu-main-categories-list{*/
+/*    margin-right: 200px;*/
+/*}*/
+
+/*.order-mobile-content-row .mnu-main-categories-list .main-category:first-child{*/
+/*    !*padding-: 100px;*!*/
+/*    background-color: #2B2B2B;*/
+/*}*/
 
 .order-mobile-wrapper .mnu-main-categories-list{
-    top:450px;
+    position: inherit;
+    top:250px;
+}
+
+.order-mobile-wrapper .mnu-main-categories-list .main-category{
+    background-color: #2B2B2B;
 }
 
 
