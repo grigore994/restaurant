@@ -65,6 +65,24 @@ const swiper3 = new Swiper('.swiper3', {
     // },
 });
 
+const swiper4 = new Swiper('.swiper4', {
+    direction: 'horizontal',
+    // loop: true,
+    spaceBetween:20,
+    slidesPerView:'auto',
+    // centeredSlides: true,
+    // fill: 'row',
+
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     type: 'bullets',
+    // },
+
+    // autoplay: {
+    //     delay: 3000,
+    // },
+});
+
 
 
 window.addEventListener('click', (mouseClick) => {
@@ -83,6 +101,12 @@ window.addEventListener('click', (mouseClick) => {
     if (itemClicked.className === "main-category") {
         let activeElement = document.getElementsByClassName("main-category active");
         activeElement[0].className = "main-category";
+        itemClicked.className += " active";
+    }
+
+    if (itemClicked.className === "mobile-main-category") {
+        let activeElement = document.getElementsByClassName("mobile-type-category active");
+        activeElement[0].className = "mobile-main-category";
         itemClicked.className += " active";
     }
 
