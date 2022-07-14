@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <link href="https://fonts.googleapis.com" rel="preconnect">
+      <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+      <link href="https://fonts.googleapis.com" rel="preconnect">
+      <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@1,700&display=swap"
+            rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
+            rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+      <link href="styles.css" rel="stylesheet">
+      <title>Check Out Mobile</title>
+   </head>
+   <body>
+      <div class="wrapper check-out-mobile-wrapper">
+         <section class="right-container check-out-container column" id="check-out-container">
+            <form action="" id="checkOutForm">
+               <div class="back-btn check-out-container-back-btn">
+                  <i class="fa-solid fa-arrow-left"></i>
+               </div>
+
+               <div class="right-container-title row">
+                  Livrare
+               </div>
+
+               <div class="delivery-date-container">
+                  <div class="right-conteiner-block-title">Timpul de livrare</div>
+                  <div class="delivery-time-container">
+                     <div class="dlv-check-option row">
+                        <div class="check-option-icon">
+                           <img src="img/clockFast.svg" alt="clockFast.svg">
+                        </div>
+                        <div class="check-option-text">Cât de curând</div>
+                        <input type="radio" class="radio-input" name="when" checked>
+                     </div>
+
+                     <div class="dlv-check-option row">
+                        <div class="check-option-icon">
+                           <img src="img/clockCheck.svg" alt="clockCheck.svg">
+                        </div>
+                        <div class="check-option-text">
+                           Ora dorită
+                           <input type="time" class="time-input" id="timeInput">
+                        </div>
+                        <input type="radio" class="radio-input" name="when">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="delivery-date-container">
+                  <div class="right-conteiner-block-title">Tipul de livrare</div>
+                  <div class="delivery-time-container">
+                     <div class="dlv-check-option row">
+                        <div class="check-option-icon">
+                           <img src="img/home.svg" alt="home.svg">
+                        </div>
+                        <div class="check-option-text">Livrare acasă</div>
+                        <input type="radio" class="radio-input" name="how" checked>
+                     </div>
+
+                     <div class="dlv-check-option row">
+                        <div class="check-option-icon">
+                           <img src="img/cartBag.svg" alt="cartBag.svg">
+                        </div>
+                        <div class="check-option-text">Îl iau singur</div>
+                        <input type="radio" class="radio-input" name="how">
+                     </div>
+                  </div>
+               </div>
+
+               <div class="right-container complete-order-container column" id="complete-order-container">
+
+                  <div class="row right-container-title">
+                     <p>Adresa <span style="font-weight: normal">de livrare</span></p>
+                  </div>
+
+                  <div class="delivery-date-container">
+
+                     <div class="client-dlv-data column">
+                        <input type="text" class="dlv-address" placeholder="Nume Prenume">
+                        <input type="text" class="dlv-address" placeholder="Adresa (strada,bloc,ap.)">
+                        <input type="text" class="dlv-address" placeholder="Număr de telefon">
+                     </div>
+
+                     <div class="row right-container-title">
+                        <p><span style="font-weight: normal">Metoda de</span> plată:</p>
+                     </div>
+
+                     <div class="delivery-time-container">
+
+                        <div class="dlv-check-option row">
+                           <div class="check-option-icon">
+                              <img src="img/cash.svg" alt="cash.svg">
+                           </div>
+                           <div>
+                              <div class="check-option-text">În Numerar</div>
+                              <div class="check-option-subtext">La momentul livrării</div>
+                           </div>
+                           <input type="radio" class="radio-input" name="cash" checked>
+                        </div>
+
+                        <div class="dlv-check-option row">
+                           <div class="check-option-icon">
+                              <img src="img/card.svg" alt="card.svg">
+                           </div>
+                           <div>
+                              <div class="check-option-text">On-Line</div>
+                              <div class="check-option-subtext">Card Bancar</div>
+                           </div>
+                           <input type="radio" class="radio-input" name="cash">
+                        </div>
+
+                        <div class="dlv-check-option row">
+                           <div class="check-option-icon">
+                              <img src="img/card.svg" alt="card.svg">
+                           </div>
+                           <div>
+                              <div class="check-option-text">Card Bancar</div>
+                              <div class="check-option-subtext">La momentul livrării</div>
+                           </div>
+                           <input type="radio" class="radio-input" name="cash">
+                        </div>
+                     </div>
+                  </div>
+
+
+                  <div class="subtotal-container">
+                     <div class="subtotal-costs dlv-cost row">
+                        <div class="dlv-cost-name">Subtotal</div>
+                        <div class="dlv-cost-price subtotal-costs-price" style="color: #686868">MDL 465.00</div>
+                     </div>
+
+                     <div class="dlv-cost row">
+                        <div class="dlv-cost-name">Livrare</div>
+                        <div class="dlv-cost-price">MDL 30</div>
+                     </div>
+
+                     <div class="subtotal-data row">
+                        <div class="subtotal-text">Total</div>
+                        <div class="subtotal-price">MDL 450</div>
+                     </div>
+
+                     <div class="subtotal-btn">
+                        <button class="complete-btn">Finalizare Comanda</button>
+                     </div>
+                  </div>
+               </div>
+
+            </form>
+
+         </section >
+      </div>
+      <script src="https://kit.fontawesome.com/af38c7a6fc.js" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script src="index.js"></script>
+   </body>
+</html>
