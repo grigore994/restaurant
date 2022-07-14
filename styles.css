@@ -1174,6 +1174,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .ordered-item {
+    position: relative;
     width: 100%;
     padding: 10px 14px 10px 14px;
     background-color: #FFFFFF;
@@ -1703,6 +1704,107 @@ input.time-input {
 
 }
 
+.mobile-order-wrapper{
+    display: none;
+    background-color: #FFFFFF;
+}
+
+.mobile-order-wrapper .back-btn{
+    margin-bottom: 30px;
+    background-color: var(--gray);
+}
+
+.mobile-order-wrapper .right-container{
+    background-color: #FFFFFF;
+}
+
+.mobile-order-wrapper .right-container-title{
+    color: #2B2B2B;
+}
+
+.mobile-order-wrapper .ordered-item{
+    background-color: var(--gray);
+}
+
+.close-sign-container{
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 4px;
+    width: 42px;
+    height: 42px;
+    background-color: var(--gray);
+    border: 4px solid #FFFFFF;
+    z-index: 5;
+    border-radius: 50%;
+}
+.close-sign-container i{
+    font-size: 23px;
+}
+
+.mobile-order-wrapper .ordered-item-name p{
+    font-weight: bold;
+}
+
+.mobile-order-wrapper .total-btn button{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    background-color: #FFFFFF;
+    color: var(--dark-green);
+}
+.mobile-order-wrapper .total-items-nr input{
+    background-color: var(--gray);
+}
+
+.item-gty-label{
+    margin-right: 80px;
+}
+
+.mobile-order-wrapper .ordered-item-qty{
+    padding: 15px 0;
+}
+
+.mobile-order-wrapper .ordered-items-price{
+    padding-bottom: 15px;
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.mobile-order-wrapper .right-conteiner-block-title{
+    color: #9B9B9B;
+}
+
+.mobile-order-wrapper .order-comment-container{
+    padding-bottom: 40px;
+}
+
+.mobile-order-wrapper .comment-input textarea{
+    background-color: var(--gray);
+    color: #9B9B9B;
+    padding: 15px 15px;
+}
+
+.mobile-order-wrapper .subtotal-data{
+    margin: 0 0;
+    border-top: none;
+    padding-top: 0;
+}
+.mobile-order-wrapper .subtotal-btn{
+    padding-bottom: 30px;
+}
+.mobile-order-wrapper
+.mobile-order-wrapper
+.mobile-order-wrapper
+.mobile-order-wrapper
+
+
 
 @media (max-width: 1450px) {
     .mnu-item {
@@ -1762,6 +1864,9 @@ input.time-input {
 }
 
 @media (max-width: 1000px) {
+    .mobile-order-wrapper{
+        display: flex;
+    }
     .order-mobile-wrapper {
         display: inherit;
     }
@@ -2574,7 +2679,39 @@ input.time-input {
         height: 60px;
         margin-bottom: -60px;
     }
-}
+
+    .mobile-order-wrapper .right-container{
+        padding: 35px 25px 0 15px;
+    }
+
+    .mobile-order-wrapper .ordered-item-name p{
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .item-gty-label{
+        margin-right: 15px;
+        font-size: 13px;
+    }
+    .mobile-order-wrapper .ordered-item-qty{
+        padding: 5px 0;
+    }
+
+    .mobile-order-wrapper .ordered-items-price{
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .mobile-order-wrapper .total-btn button{
+        width: 30px;
+        height: 30px;
+    }
+
+    .mobile-order-wrapper .ordered-item-img img {
+        /*width: 90px;*/
+        /*height: 90px;*/
+    }
+    }
 
 @media (max-width: 440px) {
     .swiper3 .swiper-pagination {
@@ -2684,6 +2821,12 @@ input.time-input {
     }
 }
 
+@media (max-width: 370px) {
+    .close-sign-container i{
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 352px) {
     .order-mobile-item {
         padding: 5px 5px;
@@ -2703,11 +2846,50 @@ input.time-input {
         font-size: 8px;
     }
 
-    /*.add-to-card-btn{*/
-    /*    font-size: 8px;*/
-    /*}*/
+    .mobile-order-wrapper .ordered-item{
+        padding-left: 7px;
+    }
 
-}
+    .mobile-order-wrapper .ordered-item-img{
+        width: fit-content;
+        height: fit-content;
+    }
+
+
+    .mobile-order-wrapper .ordered-item-img img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .mobile-order-wrapper .ordered-item-name p{
+        font-size: 12px;
+    }
+
+    /*.item-gty-label{*/
+    /*    margin-right: 15px;*/
+    /*    font-size: 13px;*/
+    /*}*/
+    .mobile-order-wrapper .ordered-item-qty{
+        padding: 0 0;
+    }
+
+    .mobile-order-wrapper .ordered-items-price{
+        padding-bottom: 0px;
+        font-size: 14px;
+    }
+
+    .mobile-order-wrapper .total-btn button{
+        width: 25px;
+        height: 25px;
+    }
+
+    .mobile-order-wrapper .ordered-item{
+        margin-bottom: 20px;
+    }
+
+
+    }
 
 @media (max-width: 340px) {
     .footer-mobile-container {
