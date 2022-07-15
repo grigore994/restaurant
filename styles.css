@@ -133,18 +133,21 @@ input, button, textarea, select {
 
 /*************************************End Zeroing *********************************************************************/
 .home-wrapper {
+    width: 100%;
+    z-index: 5;
     min-height: 100%;
     background-color: black;
-    background-size: auto 100%;
+    /*background-size: auto 100%;*/
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: left top;
+    /*background-position: left top;*/
     background-image: url("img/Home.png");
 
 }
 
 .home-wrapper2 {
     margin: -10px 0;
-    background-color: black;
+    /*background-color: black;*/
 }
 
 .about-us-mobile-wrapper {
@@ -198,6 +201,7 @@ input, button, textarea, select {
 }
 
 .mnu-list {
+
 }
 
 .mnu-item {
@@ -1290,7 +1294,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .check-out-container {
-    /*todo retur display style*/
     display: none;
 }
 
@@ -1918,13 +1921,13 @@ input.time-input {
 /*    padding-bottom: 70px;*/
 /*}*/
 
-.container{
+.container {
     position: relative;
     justify-content: space-between;
     width: 100%;
 }
 
-.circle{
+.circle {
     background-color: #FFFFFF;
     width: 60px;
     height: 60px;
@@ -1932,43 +1935,122 @@ input.time-input {
     position: relative;
 }
 
-.left-circle{
+.left-circle {
     right: 45px;
 }
 
-.right-circle{
+.right-circle {
     left: 45px;
 }
 
-.interrupted-line{
+.interrupted-line {
     width: 80%;
     height: 30px;
     border-bottom: 4px solid #E8E8E8;
     border-bottom-style: dashed;
 }
 
-.data-totals{
+.data-totals {
     align-items: center;
     justify-content: center;
     padding-top: 40px;
 }
 
-.data-totals-title{
+.data-totals-title {
     font-size: 20px;
     padding-bottom: 15px;
 }
-.data-totals-sum{
-font-size: 25px;
+
+.data-totals-sum {
+    font-size: 25px;
     font-weight: bold;
     color: #526A30;
 }
 
-.mobile-order-complete .subtotal-btn{
+.mobile-order-complete .subtotal-btn {
     margin-top: 60px;
 }
 
-.mobile-order-complete .subtotal-btn button{
+.mobile-order-complete .subtotal-btn button {
     background-color: #526A30;
+}
+
+.home-mobile-wrapper {
+    display: none;
+    width: 100%;
+    z-index: 5;
+    min-height: 100%;
+    background-color: black;
+    /*background-size: auto 100%;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-position: left top;*/
+    background-image: url("img/homeBackgroundMobile.png");
+}
+
+.home-mobile-wrapper .home-mobile-intro .icon {
+    background-color: #FFFFFF;
+}
+
+.home-mobile-intro-data {
+    justify-content: center;
+    align-items: center;
+}
+
+.home-mobile-wrapper .logo-container {
+    padding: 350px 0 25px 0;
+    font-size: 45px;
+    display: flex;
+}
+
+.home-mobile-wrapper .logo-container a {
+    font-family: 'Montserrat', serif;
+}
+
+.intro-address-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-address-container p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+
+.home-mobile-wrapper {
+}
+
+.home-mobile-wrapper {
+}
+
+.home-mobile-wrapper {
+}
+
+.home-mobile-wrapper {
+}
+
+.home-mobile-wrapper {
+}
+
+.home-mobile-wrapper {
+}
+
+.home-mobile-wrapper {
+}
+
+.home-mobile-wrapper {
+}
+
+.home-mobile-wrapper {
+}
+
+.home-mobile-wrapper {
+}
+
+.home-mobile-wrapper {
 }
 
 
@@ -1983,6 +2065,13 @@ font-size: 25px;
     }
 }
 
+@media (max-width: 1330px) {
+    .categories-item * {
+        padding: 0 40px;
+        font-size: 60px;
+    }
+}
+
 @media (max-width: 1300px) {
     .footer-center {
         max-width: 400px;
@@ -1991,6 +2080,7 @@ font-size: 25px;
 
 @media (max-width: 1160px) {
     .header {
+        z-index: 5;
         padding: 40px 15px 0 15px;
     }
 
@@ -2063,12 +2153,17 @@ font-size: 25px;
     }
 
     .logo-container {
+        z-index: 5;
         display: none;
         padding: 50px 0;
         position: relative;
         /*position: absolute;*/
         /*top: 15px;*/
         /*left: 20px;*/
+    }
+
+    .logo-container a {
+        z-index: 5;
     }
 
     .icon {
@@ -2534,6 +2629,10 @@ font-size: 25px;
     .mobile-order-complete {
         display: inherit;
     }
+
+    .home-mobile-wrapper {
+        display: flex;
+    }
 }
 
 @media (max-width: 860px) {
@@ -2627,6 +2726,10 @@ font-size: 25px;
     .mobile-presentation-title {
         font-size: 23px;
     }
+
+    .home-mobile-wrapper .logo-container {
+        padding: 300px 0 25px 0;
+    }
 }
 
 
@@ -2705,6 +2808,10 @@ font-size: 25px;
 
     .add-to-card-btn {
         font-size: 12px;
+    }
+
+    .home-mobile-wrapper .logo-container {
+        padding: 250px 0 25px 0;
     }
 
 }
@@ -2816,27 +2923,32 @@ font-size: 25px;
         font-size: 14px;
     }
 
-    .mobile-order-complete{
+    .mobile-order-complete {
         padding: 100px 20px 30px 20px;
     }
 
-    .container{
+    .container {
         justify-content: center;
     }
 
-    .interrupted-line{
+    .interrupted-line {
         width: 87%;
     }
 
-    .circle{
+    .circle {
         position: absolute;
     }
 
-    .right-circle{
+    .right-circle {
         left: -50px;
     }
-    .left-circle{
+
+    .left-circle {
         right: -50px;;
+    }
+
+    .home-mobile-wrapper .logo-container {
+        padding: 200px 0 25px 0;
     }
 
 }
@@ -2971,6 +3083,10 @@ font-size: 25px;
     .map-container-mobile iframe {
         height: 250px;
     }
+
+    .home-mobile-wrapper {
+        /*background-size: auto 100%;*/
+    }
 }
 
 @media (max-width: 400px) {
@@ -3039,6 +3155,10 @@ font-size: 25px;
 
     .add-to-card-btn {
         font-size: 10px;
+    }
+
+    .intro-address-container p {
+        font-size: 18px;
     }
 }
 
@@ -3121,15 +3241,15 @@ font-size: 25px;
         margin-bottom: 20px;
     }
 
-    .data-container-title{
+    .data-container-title {
         font-size: 20px;
     }
 
-    .mobile-order-complete .subtotal-btn{
+    .mobile-order-complete .subtotal-btn {
         margin-top: 40px;
     }
 
-    .circle{
+    .circle {
         width: 50px;
         height: 50px;
     }
