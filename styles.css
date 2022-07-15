@@ -1918,6 +1918,28 @@ input.time-input {
 /*    padding-bottom: 70px;*/
 /*}*/
 
+.container{
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.circle{
+    background-color: #FFFFFF;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.left-circle{
+    right: 45px;
+}
+
+.right-circle{
+    left: 45px;
+}
+
 .interrupted-line{
     width: 80%;
     height: 30px;
@@ -2798,9 +2820,25 @@ font-size: 25px;
         padding: 100px 20px 30px 20px;
     }
 
+    .container{
+        justify-content: center;
+    }
+
     .interrupted-line{
         width: 87%;
     }
+
+    .circle{
+        position: absolute;
+    }
+
+    .right-circle{
+        left: -50px;
+    }
+    .left-circle{
+        right: -50px;;
+    }
+
 }
 
 @media (max-width: 470px) {
@@ -3090,6 +3128,18 @@ font-size: 25px;
     .mobile-order-complete .subtotal-btn{
         margin-top: 40px;
     }
+
+    .circle{
+        width: 50px;
+        height: 50px;
+    }
+
+    /*.right-circle{*/
+    /*    left: -50px;*/
+    /*}*/
+    /*.left-circle{*/
+    /*    right: -50px;;*/
+    /*}*/
 }
 
 @media (max-width: 340px) {
