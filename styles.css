@@ -1980,12 +1980,16 @@ input.time-input {
     width: 100%;
     z-index: 5;
     min-height: 100%;
-    background-color: black;
+}
+
+.home-mobile-intro{
+    background-color: white;
     /*background-size: auto 100%;*/
     background-size: cover;
     background-repeat: no-repeat;
     /*background-position: left top;*/
     background-image: url("img/homeBackgroundMobile.png");
+    min-height: calc(100vh - 70px);
 }
 
 .home-mobile-wrapper .home-mobile-intro .icon {
@@ -2018,6 +2022,52 @@ input.time-input {
     font-weight: bold;
     padding-bottom: 15px;
 }
+
+.bottom-options{
+    padding: 20px 10px 25px 10px;
+    justify-content: space-between;
+}
+
+.bottom-options .top-lang{
+    display: flex;
+}
+
+.filter-icon-conteiner{
+    margin-right: 15px;
+    width:40px;
+    height:40px;
+    border-radius: 10px;
+    font-size: 20px;
+    align-items:center;
+    justify-content: center;
+    background-color: var(--gray);
+}
+.filter-icon-conteiner i{
+    border-radius: 10px;
+}
+
+.bottom-options .search-icon-container {
+    width:40px;
+    height:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-shopping-container{
+    margin-left: 15px;
+    width:40px;
+    height:40px;
+    border-radius: 10px;
+    font-size: 20px;
+    align-items:center;
+    justify-content: center;
+    background-color: var(--gray);
+
+}
+.cart-shopping-container i{
+    border-radius: 10px;
+}
+
 
 
 .home-mobile-wrapper {
@@ -2082,6 +2132,10 @@ input.time-input {
     .header {
         z-index: 5;
         padding: 40px 15px 0 15px;
+    }
+
+    .home-mobile-wrapper .header{
+        padding-left: 0;
     }
 
     .header-container {
@@ -2948,7 +3002,7 @@ input.time-input {
     }
 
     .home-mobile-wrapper .logo-container {
-        padding: 200px 0 25px 0;
+        padding: 150px 0 25px 0;
     }
 
 }
@@ -3160,6 +3214,10 @@ input.time-input {
     .intro-address-container p {
         font-size: 18px;
     }
+
+    .home-mobile-wrapper .logo-container{
+        padding-top: 120px;
+    }
 }
 
 @media (max-width: 370px) {
@@ -3177,6 +3235,10 @@ input.time-input {
 
     .check-out-mobile-wrapper .radio-input {
         right: 15px;
+    }
+
+    .home-mobile-wrapper .logo-container{
+        padding-top: 100px;
     }
 }
 
@@ -3344,6 +3406,10 @@ input.time-input {
 
     .add-to-card-btn {
         font-size: 9px;
+    }
+
+    .home-mobile-wrapper .logo-container{
+        padding-top: 80px;
     }
 }
 
