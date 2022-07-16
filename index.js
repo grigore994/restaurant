@@ -1,3 +1,25 @@
+
+
+
+
+
+
+// document.addEventListener('swipe', function(e) {
+//     console.log("swiped");
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Implement functionality for header/menu
 function handleBurgerMenuFn() {
     let x = document.getElementById("myTopNav");
@@ -77,6 +99,26 @@ const swiper4 = new Swiper('.swiper4', {
     //     el: '.swiper-pagination',
     //     type: 'bullets',
     // },
+
+    // autoplay: {
+    //     delay: 3000,
+    // },
+});
+
+const swiper5 = new Swiper('.swiper5', {
+    // modules:[Pagination],
+    // Optional parameters
+    direction: 'horizontal',
+    // loop: true,
+    spaceBetween:20,
+    slidesPerView:1,
+    centeredSlides: true,
+    // fill: 'row',
+
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
 
     // autoplay: {
     //     delay: 3000,
@@ -286,33 +328,19 @@ window.addEventListener('click', (mouseClick) => {
         completeOrderContainer.style.display = "inherit";
     }
 
-
-    // if (itemClicked.className === "decrease-btn" || itemClicked.className === "increase-btn") {
-    //     console.log(itemClicked.className);
-    //
-    //     switch (itemClicked.className){
-    //         case "increase-btn":{
-    //             console.log(document.querySelector(".total-items-nr input"));
-    //             break;
-    //         }
-    //         case "decrease-btn":{
-    //             break;
-    //         }
-    //     }
-    // }
-
 });
 
-let datePicker = document.getElementById("#datePicker");
-datePicker.value = new Date(Date.now()).toISOString().slice(0, 16);
-let timePicker = document.getElementById("timeInput");
-timePicker.value = new Date(Date.now()).toISOString().slice(11, 16);
+// let orderForm = document.getElementById("orderForm");
+// let checkOutForm = document.getElementById("checkOutForm");
+// function handleSubmit(event) {
+//     event.preventDefault();
+// }
+// orderForm.addEventListener('submit', handleSubmit);
+// checkOutForm.addEventListener('submit', handleSubmit);
+//
+//
+// let datePicker = document.getElementById("#datePicker");
+// datePicker.value = new Date(Date.now()).toISOString().slice(0, 16);
+// let timePicker = document.getElementById("timeInput");
+// timePicker.value = new Date(Date.now()).toISOString().slice(11, 16);
 
-let orderForm = document.getElementById("orderForm");
-let checkOutForm = document.getElementById("checkOutForm");
-
-orderForm.addEventListener('submit', handleSubmit);
-checkOutForm.addEventListener('submit', handleSubmit);
-function handleSubmit(event) {
-    event.preventDefault();
-}
