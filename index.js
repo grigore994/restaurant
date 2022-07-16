@@ -52,10 +52,12 @@ function handleTouchMove(evt) {
             /* down swipe */
             console.log('swiped down')
             document.getElementById('bottom-options').style.display='none';
-            document.getElementById('home-intro').style.backgroundImage = 'none';
+            // document.getElementById('home-intro').style.backgroundImage = 'none';
             document.getElementById('home-intro').style.minHeight = 'calc(100vh - 100vh)';
-            document.getElementById('home-intro').style.transition = 'min-height 2s ease-in-out 2s';
-            document.getElementById('home-intro').style.transition = 'background-image 2s ease-in-out 2s';
+            document.getElementById('home-intro').style.transition = 'min-height 0.3s ease-in-out 0.3s';
+            document.getElementById('background-img').style.display="none";
+            document.getElementById('background-img').style.transition = 'top 0.3s ease-in-out 0.3s';
+            // document.getElementById('home-intro').style.transition = 'background-image 2s ease-in-out 2s';
 
             document.getElementById('home-footer-mobile').style.display = 'flex';
             document.getElementById('home-mobile-intro-data').style.display = 'none';
@@ -67,12 +69,16 @@ function handleTouchMove(evt) {
         } else {
             /* up swipe */
             console.log('swiped up')
+            document.getElementById('background-img').style.display="inherit";
+
+
 
             document.getElementById('bottom-options').style.display='inherit';
-            document.getElementById('home-intro').style.backgroundImage = 'url(img/homeBackgroundMobile.png)';
+            // document.getElementById('home-intro').style.backgroundImage = 'url(img/homeBackgroundMobile.png)';
             document.getElementById('home-intro').style.minHeight = 'calc(100vh - 170px)';
             document.getElementById('home-footer-mobile').style.display = 'none';
-            document.getElementById('home-mobile-intro-data').style.display = 'inherit';
+            document.getElementById('home-mobile-intro-data').style.display = 'flex';
+            document.getElementById('home-mobile-intro-data').style.zIndex = '7';
             document.getElementById('card-icon').style.display = 'none';
             document.getElementById('search-container').style.display = 'none';
             document.getElementById('icon').style.backgroundColor= '#FFFFFF';

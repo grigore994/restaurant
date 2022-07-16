@@ -1989,11 +1989,22 @@ input.time-input {
     background-size: cover;
     background-repeat: no-repeat;
     /*background-position: left top;*/
-    background-image: url("img/homeBackgroundMobile.png");
+    /*background-image: url("img/homeBackgroundMobile.png");*/
     min-height: calc(100vh - 200px);
     /*min-height: calc(100vh - 170px);*/
 }
 
+#background-img{
+    position: absolute;
+    height: calc(100vh - 200px);
+    width: 100%;
+
+}
+
+#home-mobile-intro-data{
+align-items: center;
+    justify-content: center;
+}
 .home-mobile-wrapper .home-mobile-intro .icon {
     background-color: #FFFFFF;
 }
@@ -2003,14 +2014,18 @@ input.time-input {
     align-items: center;
 }
 
-.home-mobile-wrapper .logo-container {
-    padding: 350px 0 25px 0;
+.home-mobile-wrapper .logo2 {
+    padding: 80px 0 25px 0;
     font-size: 45px;
     display: flex;
 }
 
-.home-mobile-wrapper .logo-container a {
+.home-mobile-wrapper .logo2 a {
     font-family: 'Montserrat', serif;
+    font-size: 45px;
+    font-weight: bold;
+    padding-bottom: 00px;
+    color: var(--dark-green);
 }
 
 .intro-address-container {
@@ -2878,8 +2893,8 @@ font-size: 45px;
         font-size: 23px;
     }
 
-    .home-mobile-wrapper .logo-container {
-        padding: 300px 0 25px 0;
+    .home-mobile-wrapper .logo2 {
+        /*padding: 300px 0 25px 0;*/
     }
 }
 
@@ -2948,8 +2963,8 @@ font-size: 45px;
         font-size: 12px;
     }
 
-    .home-mobile-wrapper .logo-container {
-        padding: 250px 0 25px 0;
+    .home-mobile-wrapper .logo2 {
+        /*padding: 250px 0 25px 0;*/
     }
 
     .swiper5 .swiper-slide{
@@ -3101,8 +3116,8 @@ font-size: 45px;
         right: -50px;;
     }
 
-    .home-mobile-wrapper .logo-container {
-        padding: 150px 0 25px 0;
+    .home-mobile-wrapper .logo2 {
+        /*padding: 150px 0 25px 0;*/
     }
 
 }
@@ -3328,8 +3343,8 @@ font-size: 45px;
         font-size: 18px;
     }
 
-    .home-mobile-wrapper .logo-container{
-        padding-top: 120px;
+    .home-mobile-wrapper .logo2{
+        /*padding-top: 120px;*/
     }
 
     .swiper5 .swiper-slide{
@@ -3370,8 +3385,8 @@ font-size: 45px;
         right: 15px;
     }
 
-    .home-mobile-wrapper .logo-container{
-        padding-top: 100px;
+    .home-mobile-wrapper .logo2{
+        /*padding-top: 100px;*/
     }
 
     .swiper5 .swiper-pagination-bullet {
@@ -3546,8 +3561,8 @@ font-size: 45px;
         font-size: 9px;
     }
 
-    .home-mobile-wrapper .logo-container{
-        padding-top: 80px;
+    .home-mobile-wrapper .logo2{
+        /*padding-top: 80px;*/
     }
 
     .head-title{
