@@ -54,6 +54,9 @@ function handleTouchMove(evt) {
             document.getElementById('bottom-options').style.display='none';
             document.getElementById('home-intro').style.backgroundImage = 'none';
             document.getElementById('home-intro').style.minHeight = 'calc(100vh - 100vh)';
+            document.getElementById('home-intro').style.transition = 'min-height 2s ease-in-out 2s';
+            document.getElementById('home-intro').style.transition = 'background-image 2s ease-in-out 2s';
+
             document.getElementById('home-footer-mobile').style.display = 'flex';
             document.getElementById('home-mobile-intro-data').style.display = 'none';
             document.getElementById('card-icon').style.display = 'inherit';

@@ -1990,7 +1990,8 @@ input.time-input {
     background-repeat: no-repeat;
     /*background-position: left top;*/
     background-image: url("img/homeBackgroundMobile.png");
-    min-height: calc(100vh - 170px);
+    min-height: calc(100vh - 200px);
+    /*min-height: calc(100vh - 170px);*/
 }
 
 .home-mobile-wrapper .home-mobile-intro .icon {
