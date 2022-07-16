@@ -26,13 +26,13 @@
                      <a href="index.html"> Logo</a>
                   </div>
 
-                  <a class="icon" href="javascript:void(0);" onclick="handleBurgerMenuFn()">
+                  <a class="icon" href="javascript:void(0);" onclick="handleBurgerMenuFn()" id="icon">
                      <i class="fa fa-bars" id="open-hamburger-menu-icon"></i>
                      <i class="fas fa-times" id="close-hamburger-menu-icon"></i>
                   </a>
 
                   <!-- todo: its not displayed by default -->
-                  <div class="search-container row">
+                  <div class="search-container row" id="search-container">
                      <div class="search-icon-container" id="search-icon">
                         <img src="img/search.svg" alt="search.svg" class="search-icon">
                      </div>
@@ -206,11 +206,11 @@
             </div>
          </section>
 
-         <section class="mobile-mnu-header row">
+         <section class="mobile-mnu-header row" id="special-mnu-section">
             <p>Meniuri <span class="bold-header">Speciale</span></p>
          </section>
 
-         <div class="special-mnu-slider-container ">
+         <div class="special-mnu-slider-container">
             <div class="swiper5">
                <!-- Additional required wrapper -->
                <div class="swiper-wrapper">
@@ -260,7 +260,7 @@
             </div>
          </div>
 
-         <footer class="footer-container row" >
+         <footer class="footer-container row">
             <div class="footer-mobile">
                <div class="footer-mobile-container row" id="home-footer-mobile">
                   <div>

@@ -9,8 +9,11 @@
 // });
 
 
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove', handleTouchMove, false);
+document.getElementById('home-intro').addEventListener('touchstart', handleTouchStart, false);
+document.getElementById('home-intro').addEventListener('touchmove', handleTouchMove, false);
+
+document.getElementById('special-mnu-section').addEventListener('touchstart', handleTouchStart, false);
+document.getElementById('special-mnu-section').addEventListener('touchmove', handleTouchMove, false);
 
 var xDown = null;
 var yDown = null;
@@ -53,10 +56,24 @@ function handleTouchMove(evt) {
             document.getElementById('home-intro').style.minHeight = 'calc(100vh - 100vh)';
             document.getElementById('home-footer-mobile').style.display = 'flex';
             document.getElementById('home-mobile-intro-data').style.display = 'none';
+            document.getElementById('card-icon').style.display = 'inherit';
+            document.getElementById('search-container').style.display = 'inherit';
+            document.getElementById('icon').style.backgroundColor= '#F7F7F7';
+            document.getElementById('icon').style.color= '#4C4C4C';
             // document.getElementById('home-mobile-intro-data').style.height='0 px';
         } else {
             /* up swipe */
             console.log('swiped up')
+
+            document.getElementById('bottom-options').style.display='inherit';
+            document.getElementById('home-intro').style.backgroundImage = 'url(img/homeBackgroundMobile.png)';
+            document.getElementById('home-intro').style.minHeight = 'calc(100vh - 170px)';
+            document.getElementById('home-footer-mobile').style.display = 'none';
+            document.getElementById('home-mobile-intro-data').style.display = 'inherit';
+            document.getElementById('card-icon').style.display = 'none';
+            document.getElementById('search-container').style.display = 'none';
+            document.getElementById('icon').style.backgroundColor= '#FFFFFF';
+            document.getElementById('icon').style.color= '#526A30';
         }
     }
     /* reset values */
