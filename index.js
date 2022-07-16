@@ -4,9 +4,9 @@
 
 
 
-// document.addEventListener('swipe', function(e) {
-//     console.log("swiped");
-// });
+document.addEventListener('swipe', function(e) {
+    console.log("swiped");
+});
 
 
 
