@@ -48,6 +48,12 @@ function handleTouchMove(evt) {
         if ( yDiff > 0 ) {
             /* down swipe */
             console.log('swiped down')
+            document.getElementById('bottom-options').style.display='none';
+            document.getElementById('home-intro').style.backgroundImage = 'none';
+            document.getElementById('home-intro').style.minHeight = 'calc(100vh - 100vh)';
+            document.getElementById('home-footer-mobile').style.display = 'flex';
+            document.getElementById('home-mobile-intro-data').style.display = 'none';
+            // document.getElementById('home-mobile-intro-data').style.height='0 px';
         } else {
             /* up swipe */
             console.log('swiped up')
