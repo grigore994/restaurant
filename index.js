@@ -1,103 +1,18 @@
 
 
-
-
-
-
-// document.addEventListener('swipe', function(e) {
-//     console.log("swiped");
-// });
-
-
-document.getElementById('home-intro').addEventListener('touchstart', handleTouchStart, false);
-document.getElementById('home-intro').addEventListener('touchmove', handleTouchMove, false);
-
-document.getElementById('special-mnu-section').addEventListener('touchstart', handleTouchStart, false);
-document.getElementById('special-mnu-section').addEventListener('touchmove', handleTouchMove, false);
-
-var xDown = null;
-var yDown = null;
-
-function getTouches(evt) {
-    return evt.touches // ||             // browser API
-        // evt.originalEvent.touches; // jQuery
+function hidePopUp(){
+    let popUp = document.getElementsByClassName('pop-up')[0];
+    popUp.style.opacity = '1';
+    popUp.style.visibility = 'hidden';
 }
 
-
-function handleTouchStart(evt) {
-    const firstTouch = getTouches(evt)[0];
-    xDown = firstTouch.clientX;
-    yDown = firstTouch.clientY;
+function showPopUp() {
+    console.log('show popup')
+    // let popUp = document.getElementsByClassName('pop-up')[0];
+    let popUp = document.getElementById('pop-up');
+    popUp.style.opacity = '1';
+    popUp.style.visibility = 'visible';
 }
-
-function handleTouchMove(evt) {
-    if ( ! xDown || ! yDown ) {
-        return;
-    }
-
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
-
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-        if ( xDiff > 0 ) {
-            /* right swipe */
-        } else {
-            /* left swipe */
-        }
-    } else {
-        if ( yDiff > 0 ) {
-            /* down swipe */
-            console.log('swiped down')
-            document.getElementById('bottom-options').style.display='none';
-            // document.getElementById('home-intro').style.backgroundImage = 'none';
-            document.getElementById('home-intro').style.minHeight = 'calc(100vh - 100vh)';
-            document.getElementById('home-intro').style.transition = 'min-height 0.3s ease-in-out 0.3s';
-            document.getElementById('background-img').style.display="none";
-            document.getElementById('background-img').style.transition = 'top 0.3s ease-in-out 0.3s';
-            // document.getElementById('home-intro').style.transition = 'background-image 2s ease-in-out 2s';
-
-            document.getElementById('home-footer-mobile').style.display = 'flex';
-            document.getElementById('home-mobile-intro-data').style.display = 'none';
-            document.getElementById('card-icon').style.display = 'inherit';
-            document.getElementById('search-container').style.display = 'inherit';
-            document.getElementById('icon').style.backgroundColor= '#F7F7F7';
-            document.getElementById('icon').style.color= '#4C4C4C';
-            // document.getElementById('home-mobile-intro-data').style.height='0 px';
-        } else {
-            /* up swipe */
-            console.log('swiped up')
-            document.getElementById('background-img').style.display="inherit";
-
-
-
-            document.getElementById('bottom-options').style.display='inherit';
-            // document.getElementById('home-intro').style.backgroundImage = 'url(img/homeBackgroundMobile.png)';
-            document.getElementById('home-intro').style.minHeight = 'calc(100vh - 170px)';
-            document.getElementById('home-footer-mobile').style.display = 'none';
-            document.getElementById('home-mobile-intro-data').style.display = 'flex';
-            document.getElementById('home-mobile-intro-data').style.zIndex = '7';
-            document.getElementById('card-icon').style.display = 'none';
-            document.getElementById('search-container').style.display = 'none';
-            document.getElementById('icon').style.backgroundColor= '#FFFFFF';
-            document.getElementById('icon').style.color= '#526A30';
-        }
-    }
-    /* reset values */
-    xDown = null;
-    yDown = null;
-};
-
-
-
-
-
-
-
-
-
 
 // Implement functionality for header/menu
 function handleBurgerMenuFn() {
@@ -409,17 +324,97 @@ window.addEventListener('click', (mouseClick) => {
 
 });
 
-// let orderForm = document.getElementById("orderForm");
-// let checkOutForm = document.getElementById("checkOutForm");
-// function handleSubmit(event) {
-//     event.preventDefault();
-// }
-// orderForm.addEventListener('submit', handleSubmit);
-// checkOutForm.addEventListener('submit', handleSubmit);
-//
-//
-// let datePicker = document.getElementById("#datePicker");
-// datePicker.value = new Date(Date.now()).toISOString().slice(0, 16);
-// let timePicker = document.getElementById("timeInput");
-// timePicker.value = new Date(Date.now()).toISOString().slice(11, 16);
+document.getElementById('home-intro').addEventListener('touchstart', handleTouchStart, false);
+document.getElementById('home-intro').addEventListener('touchmove', handleTouchMove, false);
+
+document.getElementById('special-mnu-section').addEventListener('touchstart', handleTouchStart, false);
+document.getElementById('special-mnu-section').addEventListener('touchmove', handleTouchMove, false);
+
+var xDown = null;
+var yDown = null;
+
+function getTouches(evt) {
+    return evt.touches // ||             // browser API
+    // evt.originalEvent.touches; // jQuery
+}
+
+
+function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];
+    xDown = firstTouch.clientX;
+    yDown = firstTouch.clientY;
+}
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            /* right swipe */
+        } else {
+            /* left swipe */
+        }
+    } else {
+        if ( yDiff > 0 ) {
+            /* down swipe */
+            console.log('swiped down')
+            document.getElementById('bottom-options').style.display='none';
+            // document.getElementById('home-intro').style.backgroundImage = 'none';
+            document.getElementById('home-intro').style.minHeight = 'calc(100vh - 100vh)';
+            document.getElementById('home-intro').style.transition = 'min-height 0.3s ease-in-out 0.3s';
+            document.getElementById('background-img').style.display="none";
+            document.getElementById('background-img').style.transition = 'top 0.3s ease-in-out 0.3s';
+            // document.getElementById('home-intro').style.transition = 'background-image 2s ease-in-out 2s';
+
+            document.getElementById('home-footer-mobile').style.display = 'flex';
+            document.getElementById('home-mobile-intro-data').style.display = 'none';
+            document.getElementById('card-icon').style.display = 'inherit';
+            document.getElementById('search-container').style.display = 'inherit';
+            document.getElementById('icon').style.backgroundColor= '#F7F7F7';
+            document.getElementById('icon').style.color= '#4C4C4C';
+            // document.getElementById('home-mobile-intro-data').style.height='0 px';
+        } else {
+            /* up swipe */
+            console.log('swiped up')
+            document.getElementById('background-img').style.display="inherit";
+
+
+
+            document.getElementById('bottom-options').style.display='inherit';
+            // document.getElementById('home-intro').style.backgroundImage = 'url(img/homeBackgroundMobile.png)';
+            document.getElementById('home-intro').style.minHeight = 'calc(100vh - 170px)';
+            document.getElementById('home-footer-mobile').style.display = 'none';
+            document.getElementById('home-mobile-intro-data').style.display = 'flex';
+            document.getElementById('home-mobile-intro-data').style.zIndex = '7';
+            document.getElementById('card-icon').style.display = 'none';
+            document.getElementById('search-container').style.display = 'none';
+            document.getElementById('icon').style.backgroundColor= '#FFFFFF';
+            document.getElementById('icon').style.color= '#526A30';
+        }
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;
+};
+
+let orderForm = document.getElementById("orderForm");
+let checkOutForm = document.getElementById("checkOutForm");
+function handleSubmit(event) {
+    event.preventDefault();
+}
+orderForm.addEventListener('submit', handleSubmit);
+checkOutForm.addEventListener('submit', handleSubmit);
+
+let datePicker = document.getElementById("#datePicker");
+datePicker.value = new Date(Date.now()).toISOString().slice(0, 16);
+let timePicker = document.getElementById("timeInput");
+timePicker.value = new Date(Date.now()).toISOString().slice(11, 16);
 
