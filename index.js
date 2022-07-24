@@ -372,6 +372,8 @@ function handleTouchMove(evt) {
             document.getElementById('home-intro').style.transition = 'min-height 0.3s ease-in-out 0.3s';
             document.getElementById('background-img').style.display="none";
             document.getElementById('background-img').style.transition = 'top 0.3s ease-in-out 0.3s';
+            // document.getElementsByClassName("mobile-food-cat")[0].style.filter='grayscale(0%)'
+
             // document.getElementById('home-intro').style.transition = 'background-image 2s ease-in-out 2s';
 
             document.getElementById('home-footer-mobile').style.display = 'flex';
@@ -380,6 +382,7 @@ function handleTouchMove(evt) {
             document.getElementById('search-container').style.display = 'inherit';
             document.getElementById('icon').style.backgroundColor= '#F7F7F7';
             document.getElementById('icon').style.color= '#4C4C4C';
+
             // document.getElementById('home-mobile-intro-data').style.height='0 px';
         } else {
             /* up swipe */
@@ -398,6 +401,8 @@ function handleTouchMove(evt) {
             document.getElementById('search-container').style.display = 'none';
             document.getElementById('icon').style.backgroundColor= '#FFFFFF';
             document.getElementById('icon').style.color= '#526A30';
+            document.getElementsByClassName("mobile-food-cat")[0].style.filter='grayscale(100%)'
+
         }
     }
     /* reset values */

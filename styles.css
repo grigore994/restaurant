@@ -1,31 +1,132 @@
 @font-face {
     font-family: Montserrat;
-    src: url("Fonts/Montserrat");
-    /*src: url("Fonts/Montserrat/Montserrat-Black.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-BlackItalic.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-Bold.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-BoldItalic.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-ExtraBold.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-ExtraLight.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-ExtraLightItalic.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-Italic.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-Light.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-LightItalic.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-Medium.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-MediumItalic.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-Regular.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-SemiBold.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-SemiBoldItalic.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-Thin.ttf");*/
-    /*src: url("Fonts/Montserrat/Montserrat-ThinItalic.ttf");*/
+    src: url("Fonts/Montserrat/Montserrat-Black.ttf");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-BlackItalic.ttf");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-ExtraBold.ttf");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-ExtraLight.ttf");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-ExtraLightItalic.ttf");
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-Italic.ttf");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-LightItalic.ttf");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-MediumItalic.ttf");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-SemiBoldItalic.ttf");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-Thin.ttf");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("Fonts/Montserrat/Montserrat-ThinItalic.ttf");
+    font-weight: 100;
+    font-style: italic;
 }
 
 @font-face {
     font-family: Hagin Caps;
     src: url("Fonts/Hagin Caps/Hagin Caps Medium.otf");
 }
-
 
 /* zeroing */
 *,
@@ -74,6 +175,11 @@ img, picture, video, canvas, svg {
 /* Inherit fonts for form controls */
 input, button, textarea, select {
     font: inherit;
+}
+
+input, textarea{
+    border: none;
+    outline: none;
 }
 
 .wrapper {
@@ -127,8 +233,19 @@ input, button, textarea, select {
     display: none;
 }
 
+.mnu-line{
+    width: 30px;
+    height: 4px;
+    background-color: var(--dark-green);
+    margin: 3px 0;
+}
+
 #close-hamburger-menu-icon {
     display: none;
+}
+
+.close-icon{
+    font-weight: 600;
 }
 
 #open-hamburger-menu-icon2 {
@@ -284,12 +401,16 @@ input, button, textarea, select {
 
 .search-container {
     position: absolute;
-    top: -20px;
-    left: 65px;
+    top: -30px;
+    left: 70px;
     align-items: center;
+    border-radius: 8px;
+    height: 50px;
 }
 
 .search-icon-container {
+    width: 50px;
+    height: 50px;
     padding: 10px 10px;
     background-color: var(--gray);
     border-radius: 8px;
@@ -301,11 +422,11 @@ input, button, textarea, select {
 }
 
 .search-input-container {
-    padding: 0 20px;
+    padding: 0 0 0 10px;
 }
 
 .search-input-container input {
-    padding: 15px 15px;
+    padding: 13px 10px;
     border: 2px solid var(--gray);
 }
 
@@ -1322,6 +1443,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .comment-input textarea {
     width: 100%;
+    border-radius: 10px;
 }
 
 .subtotal-container {
@@ -1439,17 +1561,26 @@ input.time-input {
 }
 
 .client-dlv-data input {
-    padding: 32px 24px;
+    padding: 20px 24px;
     border-radius: 10px;
     margin-bottom: 25px;
     font-size: 14px;
     color: #9B9B9B;
 }
 
+.check-option-text2{
+    padding-bottom: 4px;
+}
+
 .check-option-subtext {
     font-size: 14px;
-    line-height: 180%;
+    padding-top: 4px;
+    /*line-height: 180%;*/
     color: #9B9B9B;
+}
+
+.check-option-subtext2{
+
 }
 
 .dlv-cost {
@@ -1475,8 +1606,8 @@ input.time-input {
     cursor: pointer;
 }
 
-.back-btn i {
-    color: var(--darkness-grey);
+.back-btn img {
+    width: 20px;
 }
 
 .img-row-1 {
@@ -1799,22 +1930,26 @@ input.time-input {
 
 .close-sign-container {
     position: absolute;
-    right: -20px;
-    top: -20px;
+    right: -10px;
+    top: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 4px 4px;
-    width: 42px;
-    height: 42px;
+    width: 25px;
+    height: 25px;
     background-color: var(--gray);
     border: 4px solid #FFFFFF;
     z-index: 5;
     border-radius: 50%;
 }
 
-.close-sign-container i {
-    font-size: 23px;
+.close-sign-container p {
+    font-family: Montserrat, serif;
+    line-height: 100%;
+    font-weight: bold;
+    font-size: 15px;
+    color: #6D6D6D;
 }
 
 .mobile-order-wrapper .ordered-item-name p {
@@ -1859,6 +1994,7 @@ input.time-input {
 }
 
 .mobile-order-wrapper .comment-input textarea {
+    resize: vertical;
     background-color: var(--gray);
     color: #9B9B9B;
     padding: 15px 15px;
@@ -1872,6 +2008,19 @@ input.time-input {
 
 .mobile-order-wrapper .subtotal-btn {
     padding-bottom: 30px;
+}
+
+.mobile-order-wrapper .subtotal-btn button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mobile-order-wrapper .subtotal-btn button img{
+    width: 20px;
+    position: absolute;
+    right: 20%;
 }
 
 .check-out-mobile-wrapper .check-out-container {
@@ -2050,20 +2199,34 @@ input.time-input {
 
 .home-mobile-intro{
     background-color: white;
-    /*background-size: auto 100%;*/
-    background-size: cover;
-    background-repeat: no-repeat;
+    /*background-size: 100% 100% ;*/
+    /*background-size: contain;*/
+    /*background-repeat: no-repeat;*/
     /*background-position: left top;*/
     /*background-image: url("img/homeBackgroundMobile.png");*/
     min-height: calc(100vh - 200px);
     /*min-height: calc(100vh - 170px);*/
 }
 
+/*todo: remove this when will clean code*/
+.background-img-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 200px);
+    background-image: url("img/homeBackgroundMobile.svg");
+    background-size: 100% 100% ;
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
 #background-img{
     position: absolute;
     height: calc(100vh - 200px);
     width: 100%;
-
+    object-fit: cover;
 }
 
 #home-mobile-intro-data{
@@ -2108,6 +2271,16 @@ align-items: center;
 .bottom-options{
     padding: 20px 10px 25px 10px;
     justify-content: space-between;
+}
+
+/*.bottom-options *,*/
+.mobile-food-cat {
+    /*-webkit-filter: grayscale(100%);*/
+    /*-moz-filter: grayscale(100%);*/
+    /*-o-filter: grayscale(100%);*/
+    filter: grayscale(100%); /* IE 6-9 */
+
+    /*filter: blur(5px);*/
 }
 
 .bottom-options .top-lang{
@@ -2652,9 +2825,15 @@ margin-top: 20px;
     }
 
     .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
         position: absolute;
-        top: -20px;
-        left: 5px;
+        top: -30px;
+        left: 10px;
         color: var(--green);
         /*background-color: black;*/
         padding: 10px 10px;
@@ -2668,6 +2847,9 @@ margin-top: 20px;
 
     #card-icon {
         display: inherit;
+        position: absolute;
+        top: -30px;
+        right:-5px
     }
 
     .top-lang {
@@ -2683,7 +2865,7 @@ margin-top: 20px;
     }
 
     #open-hamburger-menu-icon {
-        font-size: 30px;
+        /*font-size: 30px;*/
         display: inherit;
     }
 
@@ -3228,9 +3410,6 @@ margin-top: 20px;
 
 
 @media (max-width: 600px) {
-    /*.mnu-items {*/
-    /*    padding-right: 40px;*/
-    /*}*/
     .address-street {
         font-size: 20px;
     }
@@ -3493,7 +3672,7 @@ margin-top: 20px;
     }
 
     .mobile-order-wrapper .right-container {
-        padding: 35px 25px 0 15px;
+        padding: 35px 15px 0 15px;
     }
 
     .mobile-order-wrapper .ordered-item-name p {
@@ -3564,6 +3743,12 @@ margin-top: 20px;
     .simple-text{
         font-size: 17px;
         padding-top: 10px;
+    }
+
+    .mobile-order-wrapper .subtotal-btn button img{
+        width: 20px;
+        position: absolute;
+        right: 15%;
     }
 }
 

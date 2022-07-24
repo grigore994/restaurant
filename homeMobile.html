@@ -3,14 +3,6 @@
    <head>
       <meta charset="UTF-8">
       <meta content="width=device-width,  initial-scale=1.0" name="viewport">
-      <link href="https://fonts.googleapis.com" rel="preconnect">
-      <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-      <link href="https://fonts.googleapis.com" rel="preconnect">
-      <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@1,700&display=swap"
-            rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
-            rel="stylesheet">
       <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
       <link href="styles.css" rel="stylesheet">
       <title>Home Mobile</title>
@@ -18,7 +10,10 @@
    <body>
       <div class="wrapper home-mobile-wrapper">
          <section class="home-mobile-intro column" id="home-intro">
-            <img id="background-img" src="img/homeBackgroundMobile.png" alt="">
+<!--            <div class="background-img-container">-->
+               <img id="background-img" src="img/homeBackgroundMobile.svg" alt="">
+<!--            </div>-->
+
             <header class="header">
                <div class="header-container row top-nav" id="myTopNav">
 
@@ -27,12 +22,19 @@
                      <a href="index.html"> Logo</a>
                   </div>
 
-                  <a class="icon" href="javascript:void(0);" onclick="handleBurgerMenuFn()" id="icon">
-                     <i class="fa fa-bars" id="open-hamburger-menu-icon"></i>
-                     <i class="fas fa-times" id="close-hamburger-menu-icon"></i>
-                  </a>
+                  <div class="icon" href="javascript:void(0);" onclick="handleBurgerMenuFn()" id="icon">
+                     <div class="column" id="open-hamburger-menu-icon">
+                        <div class="mnu-line"></div>
+                        <div class="mnu-line"></div>
+                        <div class="mnu-line"></div>
+                     </div>
 
-                  <!-- todo: its not displayed by default -->
+                     <div id="close-hamburger-menu-icon">
+                        <div class="close-icon">X</div>
+                     </div>
+                  </div>
+
+
                   <div class="search-container row" id="search-container">
                      <div class="search-icon-container" id="search-icon">
                         <img src="img/search.svg" alt="search.svg" class="search-icon">
