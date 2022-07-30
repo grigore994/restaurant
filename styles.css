@@ -410,6 +410,9 @@ input, textarea {
 }
 
 .search-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     padding: 10px 10px;
@@ -418,8 +421,8 @@ input, textarea {
 }
 
 .search-icon-container img {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
 }
 
 .search-input-container {
@@ -2917,9 +2920,13 @@ input.time-input {
     }
 
     #back-arrow-icon {
-        font-size: 30px;
+        /*font-size: 30px;*/
         display: inherit;
-        color: var(--darkness-grey);
+        /*color: var(--darkness-grey);*/
+    }
+
+    #back-arrow-icon img{
+        width: 25px;
     }
 
     .responsive .logo-container {
@@ -3193,7 +3200,7 @@ input.time-input {
 
     .reviews-mobile-wrapper {
         display: inherit;
-        padding-bottom: 150px;
+        padding-bottom: 50px;
     }
 
     .reviews-mobile-title {
@@ -3206,21 +3213,26 @@ input.time-input {
         padding: 0 20px;
     }
 
+    .news-container{
+        padding: 0 20px;
+    }
+
     .swiper3 {
         width: 100%;
         position: relative;
     }
 
     .swiper3 .swiper-wrapper {
-        position: relative;
+        /*position: relative;*/
         /*width: 500px;*/
         margin: 0 auto;
     }
 
     .swiper3 .swiper-slide {
+        /*position: relative;*/
         /*!*margin: 0 auto;*!*/
         width: 100%;
-        /*height: 100%;*/
+        height: 100%;
         /*height: 250px;*/
         align-items: center;
         justify-content: center;
@@ -3228,13 +3240,14 @@ input.time-input {
     }
 
     .swiper3 .swiper-pagination {
-        position: relative;
+        /*position: relative;*/
+        position: absolute;
         bottom: -45px;
     }
 
     .swiper3 .swiper-pagination-bullet {
-        width: 1rem;
-        height: 1rem;
+        width: 0.65rem;
+        height: 0.65rem;
         background-color: #CAD3BC;
     }
 
@@ -3246,7 +3259,10 @@ input.time-input {
         border-radius: 20px;
         background-color: var(--gray);
         padding: 30px 20px;
+    }
 
+    .news-container .mobile-client-review{
+        margin-bottom: 35px;
     }
 
     .quotes {
@@ -3270,6 +3286,7 @@ input.time-input {
 
     .client-review-paragraph {
         padding-bottom: 25px;
+        line-height: 160%;
         font-size: 18px;
         color: #6C6C6C;
     }
@@ -3601,18 +3618,18 @@ input.time-input {
     }
 
     .swiper3 .swiper-pagination {
-        bottom: -120px;
+        /*bottom: -120px;*/
 
     }
 
     .reviews-mobile-news {
-        margin-top: 120px;
+        /*margin-top: 120px;*/
     }
 
-    .reviews-mobile-wrapper {
-        padding-bottom: 220px;
+    /*.reviews-mobile-wrapper {*/
+    /*    padding-bottom: 220px;*/
 
-    }
+    /*}*/
 
     .order-mobile-title {
         padding: 30px 20px;
@@ -3767,12 +3784,12 @@ input.time-input {
 
 @media (max-width: 440px) {
     .swiper3 .swiper-pagination {
-        bottom: -150px;
+        /*bottom: -150px;*/
 
     }
 
     .reviews-mobile-news {
-        margin-top: 150px;
+        /*margin-top: 150px;*/
     }
 
     .special-mnu-slider-container {
@@ -3865,9 +3882,9 @@ input.time-input {
         font-size: 13px;
     }
 
-    .reviews-mobile-wrapper {
-        padding-bottom: 250px;
-    }
+    /*.reviews-mobile-wrapper {*/
+    /*    padding-bottom: 250px;*/
+    /*}*/
 
     .mobile-presentation .presentation-img img {
         left: -10px;
@@ -4096,12 +4113,12 @@ input.time-input {
     }
 
     .swiper3 .swiper-pagination {
-        bottom: -180px;
+        /*bottom: -180px;*/
 
     }
 
     .reviews-mobile-news {
-        margin-top: 170px;
+        /*margin-top: 170px;*/
     }
 }
 
