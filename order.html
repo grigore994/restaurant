@@ -3,17 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <meta content="width=device-width, initial-scale=1.0" name="viewport">
-      <link href="https://fonts.googleapis.com" rel="preconnect">
-      <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-      <link href="https://fonts.googleapis.com" rel="preconnect">
-      <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@1,700&display=swap"
-            rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
-            rel="stylesheet">
-
-      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-
+<!--      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>-->
 
       <link href="styles.css" rel="stylesheet">
       <title>Order</title>
@@ -27,8 +17,17 @@
                </div>
 
                <a class="icon" href="javascript:void(0);" onclick="handleBurgerMenuFn()">
-                  <i class="fa fa-bars" id="open-hamburger-menu-icon"></i>
-                  <i class="fas fa-times" id="close-hamburger-menu-icon"></i>
+                  <div class="column" id="open-hamburger-menu-icon">
+                     <div class="mnu-line"></div>
+                     <div class="mnu-line"></div>
+                     <div class="mnu-line"></div>
+                  </div>
+
+                  <div id="close-hamburger-menu-icon">
+                     <div class="close-icon">X</div>
+                  </div>
+<!--                  <i class="fa fa-bars" id="open-hamburger-menu-icon"></i>-->
+<!--                  <i class="fas fa-times" id="close-hamburger-menu-icon"></i>-->
                </a>
 
                <div class="mnu-lang row top-lang">
@@ -429,7 +428,7 @@
                         <div class="ordered-item-totals column">
                            <div class="ordered-items-price">MDL 220</div>
                            <div class="ordered-items-remove">
-                              <i class="fa-solid fa-trash-can"></i>
+                              <img src="img/trash.svg">
                            </div>
                         </div>
                      </div>
@@ -464,8 +463,7 @@
                         <div class="ordered-item-totals column">
                            <div class="ordered-items-price">MDL 220</div>
                            <div class="ordered-items-remove">
-                              <i class="fa-solid fa-trash-can"></i>
-                           </div>
+                              <img src="img/trash.svg">                           </div>
                         </div>
                      </div>
 
@@ -499,8 +497,7 @@
                         <div class="ordered-item-totals column">
                            <div class="ordered-items-price">MDL 220</div>
                            <div class="ordered-items-remove">
-                              <i class="fa-solid fa-trash-can"></i>
-                           </div>
+                              <img src="img/trash.svg">                           </div>
                         </div>
                      </div>
 
@@ -534,8 +531,7 @@
                         <div class="ordered-item-totals column">
                            <div class="ordered-items-price">MDL 220</div>
                            <div class="ordered-items-remove">
-                              <i class="fa-solid fa-trash-can"></i>
-                           </div>
+                              <img src="img/trash.svg">                           </div>
                         </div>
                      </div>
 
@@ -569,7 +565,7 @@
                         <div class="ordered-item-totals column">
                            <div class="ordered-items-price">MDL 220</div>
                            <div class="ordered-items-remove">
-                              <i class="fa-solid fa-trash-can"></i>
+                              <img src="img/trash.svg">
                            </div>
                         </div>
                      </div>
@@ -741,7 +737,6 @@
 
          </div>
       </div>
-      <script src="https://kit.fontawesome.com/af38c7a6fc.js" crossorigin="anonymous"></script>
       <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       <script src="index.js"></script>
    </body>
