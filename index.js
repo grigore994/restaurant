@@ -1,6 +1,4 @@
-
-
-function hidePopUp(){
+function hidePopUp() {
     let popUp = document.getElementsByClassName('pop-up')[0];
     popUp.style.opacity = '1';
     popUp.style.visibility = 'hidden';
@@ -33,93 +31,148 @@ function handleBurgerMenuFn() {
 }
 
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween:20,
-    slidesPerView:'auto',
-});
-
-const swiper2 = new Swiper('.swiper2', {
-    // modules:[Pagination],
-    // Optional parameters
-    direction: 'horizontal',
-    // loop: true,
-    // spaceBetween:20,
-    slidesPerView:1,
-    centeredSlides: true,
-    // fill: 'row',
-
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-    },
-
-    autoplay: {
-        delay: 3000,
-    },
-});
-
-const swiper3 = new Swiper('.swiper3', {
-    // modules:[Pagination],
-    // Optional parameters
-    direction: 'horizontal',
-    // loop: true,
-    spaceBetween:20,
-    slidesPerView:1,
-    centeredSlides: true,
-    // fill: 'row',
-
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-    },
-
-    // autoplay: {
-    //     delay: 3000,
-    // },
-});
-
-const swiper4 = new Swiper('.swiper4', {
-    direction: 'horizontal',
-    // loop: true,
-    spaceBetween:20,
-    slidesPerView:'auto',
-    // centeredSlides: true,
-    // fill: 'row',
-
-    // pagination: {
-    //     el: '.swiper-pagination',
-    //     type: 'bullets',
-    // },
-
-    // autoplay: {
-    //     delay: 3000,
-    // },
-});
-
-const swiper5 = new Swiper('.swiper5', {
-    // modules:[Pagination],
-    // Optional parameters
-    direction: 'horizontal',
-    // loop: true,
-    spaceBetween:20,
-    slidesPerView:1,
-    centeredSlides: true,
-    // fill: 'row',
-
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-    },
-
-    // autoplay: {
-    //     delay: 3000,
-    // },
-});
+function attachEventListenerForAllElements(array, eventType, handler, options) {
+    Array.from(array).forEach(element => {
+        element.addEventListener(eventType, handler, false);
+    });
+}
 
 
+function handlePresentationCard(evt) {
+    if (!xDown || !yDown) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
+        if (xDiff > 0) {
+            /* right swipe */
+        } else {
+            /* left swipe */
+        }
+    } else {
+        if (yDiff > 0) {
+            /* down swipe */
+            let downArrowContainer = evt.path[2].children[3];
+            downArrowContainer.style.display = "none";
+        } else {
+            /* up swipe */
+        }
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;
+};
+
+let mobilePresentation = document.getElementsByClassName("mobile-presentation");
+try {
+    attachEventListenerForAllElements(mobilePresentation, "touchstart", handleTouchStart, false);
+    attachEventListenerForAllElements(mobilePresentation, "touchmove", handlePresentationCard, false);
+} catch (error) {
+    console.log(error)
+}
+
+try {
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+    });
+} catch (e) {
+    console.log(e)
+}
+
+try {
+    const swiper2 = new Swiper('.swiper2', {
+        // modules:[Pagination],
+        // Optional parameters
+        direction: 'horizontal',
+        // loop: true,
+        // spaceBetween:20,
+        slidesPerView: 1,
+        centeredSlides: true,
+        // fill: 'row',
+
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+
+        autoplay: {
+            delay: 3000,
+        },
+    });
+} catch (e) {
+    console.log(e)
+}
+
+try {
+    const swiper3 = new Swiper('.swiper3', {
+        // modules:[Pagination],
+        // Optional parameters
+        direction: 'horizontal',
+        // loop: true,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        centeredSlides: true,
+        // fill: 'row',
+
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+
+        // autoplay: {
+        //     delay: 3000,
+        // },
+    });
+} catch (e) {
+    console.log(e)
+}
+
+try {
+    const swiper4 = new Swiper('.swiper4', {
+        direction: 'horizontal',
+        // loop: true,
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+    });
+} catch (e) {
+    console.log(e)
+}
+
+try {
+    const swiper5 = new Swiper('.swiper5', {
+        direction: 'horizontal',
+        spaceBetween: 20,
+        slidesPerView: 1,
+        centeredSlides: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    });
+} catch (e) {
+    console.log(e)
+}
+
+try {
+    document.getElementById('home-intro').addEventListener('touchstart', handleTouchStart, false);
+    document.getElementById('home-intro').addEventListener('touchmove', handleTouchMove, false);
+
+    document.getElementById('special-mnu-section').addEventListener('touchstart', handleTouchStart, false);
+    document.getElementById('special-mnu-section').addEventListener('touchmove', handleTouchMove, false);
+} catch (e) {
+    console.log(e)
+}
 
 window.addEventListener('click', (mouseClick) => {
     let itemClicked = mouseClick.target;
@@ -129,7 +182,7 @@ window.addEventListener('click', (mouseClick) => {
         let input = document.getElementById("search-input");
         if (input.style.display === "none") {
             input.style.display = "inherit";
-        }else {
+        } else {
             input.style.display = "none";
         }
     }
@@ -169,7 +222,6 @@ window.addEventListener('click', (mouseClick) => {
         activeElement[0].className = "mobile-presentation";
         document.getElementById("personalPresentation").className += " active";
     }
-
 
 
     if (itemClicked.className === "sub-category") {
@@ -324,11 +376,6 @@ window.addEventListener('click', (mouseClick) => {
 
 });
 
-document.getElementById('home-intro').addEventListener('touchstart', handleTouchStart, false);
-document.getElementById('home-intro').addEventListener('touchmove', handleTouchMove, false);
-
-document.getElementById('special-mnu-section').addEventListener('touchstart', handleTouchStart, false);
-document.getElementById('special-mnu-section').addEventListener('touchmove', handleTouchMove, false);
 
 var xDown = null;
 var yDown = null;
@@ -346,7 +393,7 @@ function handleTouchStart(evt) {
 }
 
 function handleTouchMove(evt) {
-    if ( ! xDown || ! yDown ) {
+    if (!xDown || !yDown) {
         return;
     }
 
@@ -356,20 +403,20 @@ function handleTouchMove(evt) {
     var xDiff = xDown - xUp;
     var yDiff = yDown - yUp;
 
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-        if ( xDiff > 0 ) {
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
+        if (xDiff > 0) {
             /* right swipe */
         } else {
             /* left swipe */
         }
     } else {
-        if ( yDiff > 0 ) {
+        if (yDiff > 0) {
             /* down swipe */
             console.log('swiped down')
-            document.getElementById('bottom-options').style.display='none';
+            document.getElementById('bottom-options').style.display = 'none';
             document.getElementById('home-intro').style.minHeight = 'calc(100vh - 100vh)';
             document.getElementById('home-intro').style.transition = 'min-height 0.3s ease-in-out 0.3s';
-            document.getElementById('background-img').style.display="none";
+            document.getElementById('background-img').style.display = "none";
             document.getElementById('background-img').style.transition = 'top 0.3s ease-in-out 0.3s';
             document.getElementById("main-mnu-header").style.filter = "none"
             document.getElementById("mob-food-cat-wrapper").style.filter = "none"
@@ -378,24 +425,26 @@ function handleTouchMove(evt) {
             document.getElementById('home-mobile-intro-data').style.display = 'none';
             document.getElementById('card-icon').style.display = 'inherit';
             document.getElementById('search-container').style.display = 'inherit';
-            document.getElementById('icon').style.backgroundColor= '#F7F7F7';
-            document.getElementById('icon').style.color= '#4C4C4C';
+            document.getElementById('icon').style.backgroundColor = '#F7F7F7';
+            document.getElementById('icon').style.color = '#4C4C4C';
         } else {
             /* up swipe */
             console.log('swiped up')
-            document.getElementById('background-img').style.display="inherit";
-            document.getElementById('bottom-options').style.display='inherit';
+            document.getElementById('background-img').style.display = "inherit";
+            document.getElementById('bottom-options').style.display = 'inherit';
             document.getElementById('home-intro').style.minHeight = 'calc(100vh - 170px)';
             document.getElementById('home-footer-mobile').style.display = 'none';
             document.getElementById('home-mobile-intro-data').style.display = 'flex';
             document.getElementById('home-mobile-intro-data').style.zIndex = '7';
             document.getElementById('card-icon').style.display = 'none';
             document.getElementById('search-container').style.display = 'none';
-            document.getElementById('icon').style.backgroundColor= '#FFFFFF';
-            document.getElementById('icon').style.color= '#526A30';
+            document.getElementById('icon').style.backgroundColor = '#FFFFFF';
+            document.getElementById('icon').style.color = '#526A30';
             document.getElementById("main-mnu-header").style.filter = "blur(3px)"
             document.getElementById("mob-food-cat-wrapper").style.filter = "blur(4px)"
             document.getElementById("mobile-food-cat").style.filter = "grayscale(100%)"
+            document.querySelector(".home-mobile-wrapper .footer-mobile-container").style.display = "none";
+
         }
     }
     /* reset values */
@@ -403,16 +452,33 @@ function handleTouchMove(evt) {
     yDown = null;
 };
 
-let orderForm = document.getElementById("orderForm");
-let checkOutForm = document.getElementById("checkOutForm");
+try {
+    let orderForm = document.getElementById("orderForm");
+    let checkOutForm = document.getElementById("checkOutForm");
+
+    orderForm.addEventListener('submit', handleSubmit);
+    checkOutForm.addEventListener('submit', handleSubmit);
+} catch (e) {
+    console.log(e)
+}
+
 function handleSubmit(event) {
     event.preventDefault();
 }
-orderForm.addEventListener('submit', handleSubmit);
-checkOutForm.addEventListener('submit', handleSubmit);
 
-let datePicker = document.getElementById("#datePicker");
-datePicker.value = new Date(Date.now()).toISOString().slice(0, 16);
-let timePicker = document.getElementById("timeInput");
-timePicker.value = new Date(Date.now()).toISOString().slice(11, 16);
+try {
+    let datePicker = document.getElementById("#datePicker");
+    datePicker.value = new Date(Date.now()).toISOString().slice(0, 16);
+} catch (e) {
+    console.log(e)
+}
+
+try {
+
+} catch (e) {
+    let timePicker = document.getElementById("timeInput");
+    timePicker.value = new Date(Date.now()).toISOString().slice(11, 16);
+}
+
+
 
