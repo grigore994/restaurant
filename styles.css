@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 @font-face {
     font-family: Montserrat;
     src: url("Fonts/Montserrat/Montserrat-Black.ttf");
@@ -809,7 +821,7 @@ input, textarea {
 }
 
 .ftr-social img {
-    width: 50px;
+    width: 30px;
     margin: 0 15px;
 }
 
