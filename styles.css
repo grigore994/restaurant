@@ -527,6 +527,7 @@ input, textarea {
 }
 
 .sub-menu-presentation {
+    position: relative;
     margin-top: 100px;
     justify-content: center;
     align-items: center;
@@ -540,6 +541,16 @@ input, textarea {
     color: #FFFFFF;
     font-weight: bold;
     font-family: 'Playfair Display', serif;
+}
+
+.menu-wrapper .triangle-bottom{
+    top: -19px;
+    bottom: unset;
+}
+
+.menu-wrapper .triangle-top{
+    bottom: -19px;
+    top: unset;
 }
 
 .section-header {
@@ -583,7 +594,8 @@ input, textarea {
 
 .main-category {
     margin: 0 25px;
-    padding: 20px 25px;
+    padding: 16px 28px;
+    /*padding: 20px 25px;*/
     border-radius: 10px;
     font-size: 27px;
     font-weight: bold;
@@ -616,6 +628,7 @@ input, textarea {
     flex-wrap: wrap;
     margin: 0 auto;
     align-items: center;
+    justify-content: center;
     max-width: 1550px;
 
 }
@@ -629,7 +642,7 @@ input, textarea {
 }
 
 .item-main {
-    padding-bottom: 3px;
+    padding-bottom: 10px;
     border-bottom: 2px dotted var(--dark-gray);
     justify-content: space-between;
     color: var(--darkness-grey);
@@ -646,9 +659,10 @@ input, textarea {
 }
 
 .item-desc {
-    padding-top: 10px;
+    padding-top: 8px;
     font-size: 13px;
     color: #959595;
+    line-height: 150%;
 }
 
 .active.classic-item {
@@ -734,6 +748,12 @@ input, textarea {
     color: #FFFFFF;
     font-weight: bold;
     font-size: 20px;
+}
+
+.online-order .btn-green{
+    overflow: hidden;
+    white-space: nowrap;
+
 }
 
 .footer-container {
@@ -1229,6 +1249,7 @@ input, textarea {
 .left-container {
     /*max-width: 350px;*/
     flex: 0 1 20%;
+    border-radius: 10px;
     /*width: 100%;*/
     padding: 0 30px 40px 35px;
     background-color: var(--gray);
@@ -1272,7 +1293,7 @@ input, textarea {
 .title-row {
     justify-content: space-between;
     align-items: center;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -1284,8 +1305,16 @@ input, textarea {
     padding: 10px 0;
 }
 
-.arrow-container i {
-    padding-left: 25px;
+.arrow-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-container img {
+    width: 16px;
+    height: 16px;
+    /*padding-left: 25px;*/
 }
 
 .secondary {
@@ -1300,16 +1329,16 @@ input, textarea {
 }
 
 .secondary-title {
-    font-size: 18px;
+    font-size: 16px;
     color: #494949;
 }
 
 .secondary-title:not(:last-child) {
-    padding-bottom: 33px;
+    padding-bottom: 25px;
 }
 
 .secondary-title:first-child {
-    padding-top: 33px;
+    padding-top: 25px;
 }
 
 .center-container {
@@ -1364,7 +1393,7 @@ input, textarea {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 9px;
+    font-size: 12px;
     border-radius: 5px;
     color: #FFFFFF;
     background-color: var(--green);
@@ -1376,24 +1405,39 @@ input, textarea {
 }
 
 .total-btn {
-    padding: 0 22px;
+    padding: 0 5px;
 }
 
 .total-btn button {
+    display: flex;
     padding: 9px 0;
     width: 32px;
+    height: 32px;
     align-items: center;
     justify-content: center;
-    text-align: center;
     border-radius: 8px;
     background-color: #FFFFFF;
 }
 
-.decrease-btn {
+.decrease-btn img{
+    width: 7px;
+    height:3px;
+    object-fit: cover;
 }
 
-.increase-btn {
+.increase-btn{
+    margin-right: 20px;
 }
+
+.increase-btn img{
+    width: 10px;
+    height: 10px;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+
 
 .total-items-nr input {
     max-width: 40px;
@@ -1413,7 +1457,25 @@ input[type=number]::-webkit-inner-spin-button {
     height: 36px;
 }
 
+.active-card{
+    display: none;
+}
+
+.active .active-card{
+    display: flex;
+}
+
+.inactive-card{
+    display: flex;
+}
+
+.active .inactive-card{
+    display: none;
+}
+
+
 .right-container {
+    border-radius: 10px;
     flex: 0 1 30%;
     /*max-width: 660px;*/
     padding: 35px 35px;
@@ -1538,6 +1600,7 @@ input[type=number]::-webkit-inner-spin-button {
 .comment-input textarea {
     width: 100%;
     border-radius: 10px;
+    resize: vertical;
 }
 
 .subtotal-container {
@@ -2103,6 +2166,7 @@ input.time-input {
     background-color: var(--gray);
     color: #9B9B9B;
     padding: 15px 15px;
+    border-radius: 10px;
 }
 
 .mobile-order-wrapper .subtotal-data {
