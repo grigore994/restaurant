@@ -1714,7 +1714,6 @@ input.time-input {
 }
 
 .complete-order-container {
-    /*todo return display styles*/
     display: none;
 }
 
@@ -2128,9 +2127,7 @@ input.time-input {
     font-family: Montserrat, serif;
     line-height: 100%;
     font-weight: bold;
-    /*font-size: 15px;*/
-    /*todo redo to original*/
-    font-size: 0.25rem;
+    font-size: 15px;
     color: #6D6D6D;
 }
 
@@ -2391,27 +2388,6 @@ input.time-input {
     min-height: calc(100vh - 200px);
     /*padding-bottom: 500px;*/
 }
-
-/*!*todo: remove this when will clean code*!*/
-/*.background-img-container {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: calc(100vh - 200px);*/
-/*    background-image: url("img/homeBackgroundMobile.svg");*/
-/*    background-size: 100% 100%;*/
-/*    !*background-size: cover;*!*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center center;*/
-/*}*/
-
-/*#background-img {*/
-/*    position: absolute;*/
-/*    height: calc(100vh - 200px);*/
-/*    width: 100%;*/
-/*    object-fit: cover;*/
-/*}*/
 
 .top-background-img{
     position: absolute;
@@ -4311,13 +4287,9 @@ input.time-input {
 
 
     .mobile-order-wrapper .ordered-item-name p {
-        font-size: 0.12rem;       /*todo redo to original*/
+        font-size: 12px;
     }
 
-    /*.item-gty-label{*/
-    /*    margin-right: 15px;*/
-    /*    font-size: 13px;*/
-    /*}*/
     .mobile-order-wrapper .ordered-item-qty {
         padding: 0 0;
     }
