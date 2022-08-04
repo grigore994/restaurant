@@ -1650,7 +1650,19 @@ input[type=number]::-webkit-inner-spin-button {
 
 .delivery-time-container {
     background-color: #FFFFFF;
+    /*border-radius: 10px;*/
 }
+
+.delivery-time-container .dlv-check-option:first-child{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.delivery-time-container .dlv-check-option:last-child{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
 
 .dlv-check-option {
     position: relative;
@@ -2198,7 +2210,7 @@ input.time-input {
 
 .check-out-mobile-wrapper .complete-order-container {
     background-color: #FFFFFF;
-    padding: 70px 0 35px 0;
+    padding: 35px 0 35px 0;
 }
 
 
@@ -2372,35 +2384,49 @@ input.time-input {
 }
 
 .home-mobile-intro {
+    position: relative;
     background-color: white;
-    /*background-size: 100% 100% ;*/
-    /*background-size: contain;*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: left top;*/
-    /*background-image: url("img/homeBackgroundMobile.png");*/
     min-height: calc(100vh - 200px);
-    /*min-height: calc(100vh - 170px);*/
+    /*padding-bottom: 500px;*/
 }
 
-/*todo: remove this when will clean code*/
-.background-img-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 200px);
-    background-image: url("img/homeBackgroundMobile.svg");
-    background-size: 100% 100%;
-    /*background-size: cover;*/
-    background-repeat: no-repeat;
-    background-position: center center;
-}
+/*!*todo: remove this when will clean code*!*/
+/*.background-img-container {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: calc(100vh - 200px);*/
+/*    background-image: url("img/homeBackgroundMobile.svg");*/
+/*    background-size: 100% 100%;*/
+/*    !*background-size: cover;*!*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center center;*/
+/*}*/
 
-#background-img {
+/*#background-img {*/
+/*    position: absolute;*/
+/*    height: calc(100vh - 200px);*/
+/*    width: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+
+.top-background-img{
     position: absolute;
-    height: calc(100vh - 200px);
-    width: 100%;
+    width: 400px;
     object-fit: cover;
+    right: -150px;
+    top: -130px;
+
+}
+.bottom-background-img{
+    position: absolute;
+    width: 400px;
+    object-fit: cover;
+    /*bottom: 200px;*/
+    top: 150px;
+    left: -190px;
+    /*z-index:-1 ;*/
 }
 
 #home-mobile-intro-data {
@@ -2447,6 +2473,7 @@ input.time-input {
     padding: 15px 10px 15px 10px;
     justify-content: space-between;
     filter: blur(3px);
+    z-index: 10;
 }
 
 .mobile-food-cat {
@@ -3183,6 +3210,7 @@ input.time-input {
         display: inherit;
         padding: 40px 0 40px 20px;
         font-size: 30px;
+        z-index: 10;
     }
 
     .bold-header {
@@ -3576,6 +3604,10 @@ input.time-input {
         display: flex;
     }
 
+    .check-out-mobile-wrapper .right-container{
+        padding-bottom: 10px;
+    }
+
     .check-out-mobile-wrapper .complete-order-container {
         display: flex;
     }
@@ -3701,6 +3733,17 @@ input.time-input {
 
 
 @media (max-width: 600px) {
+    .top-background-img{
+        width: 350px;
+        right: -120px;
+        top: -120px;
+
+    }
+    .bottom-background-img{
+        width: 350px;
+        top: 210px;
+        left: -160px;
+    }
     .address-street {
         font-size: 20px;
     }
@@ -3924,14 +3967,19 @@ input.time-input {
 }
 
 @media (max-width: 470px) {
+    .top-background-img{
+        width: 300px;
+        right: -100px;
+        top: -100px;
+
+    }
+    .bottom-background-img{
+        width: 300px;
+        top: 230px;
+        left: -140px;
+    }
     .down-btn-container {
-        /*position: absolute;*/
-        /*width: 100%;*/
         top: calc(100vh - 150px);
-        /*left: 25px;*/
-        /*bottom: 300px;*/
-        /*align-items: center;*/
-        /*justify-content: center;*/
     }
 
     .down-btn img {
@@ -4026,7 +4074,7 @@ input.time-input {
     }
 
     .check-out-mobile-wrapper .complete-order-container {
-        padding: 70px 0 35px 0;
+        padding: 35px 0 35px 0;
     }
 
 }
@@ -4261,7 +4309,7 @@ input.time-input {
 
 
     .mobile-order-wrapper .ordered-item-name p {
-        font-size: 12px;
+        font-size: 0.12rem;
     }
 
     /*.item-gty-label{*/

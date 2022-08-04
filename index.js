@@ -264,8 +264,10 @@ function handleTouchMove(evt) {
             document.getElementById('bottom-options').style.display = 'none';
             document.getElementById('home-intro').style.minHeight = 'calc(100vh - 100vh)';
             document.getElementById('home-intro').style.transition = 'min-height 0.3s ease-in-out 0.3s';
-            document.getElementById('background-img').style.display = "none";
-            document.getElementById('background-img').style.transition = 'top 0.3s ease-in-out 0.3s';
+            // document.getElementById('background-img').style.display = "none";
+            document.getElementById('bottom-background-img').style.display = "none";
+            document.getElementById('top-background-img').style.display = "none";
+            // document.getElementById('background-img').style.transition = 'top 0.3s ease-in-out 0.3s';
             document.getElementById("main-mnu-header").style.filter = "none"
             document.getElementById("mob-food-cat-wrapper").style.filter = "none"
             document.getElementById("mobile-food-cat").style.filter = "none"
@@ -278,7 +280,9 @@ function handleTouchMove(evt) {
         } else {
             /* up swipe */
             console.log('swiped up')
-            document.getElementById('background-img').style.display = "inherit";
+            // document.getElementById('background-img').style.display = "inherit";
+            document.getElementById('top-background-img').style.display = "inherit";
+            document.getElementById('bottom-background-img').style.display = "inherit";
             document.getElementById('bottom-options').style.display = 'inherit';
             document.getElementById('home-intro').style.minHeight = 'calc(100vh - 170px)';
             document.getElementById('home-footer-mobile').style.display = 'none';
