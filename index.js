@@ -37,6 +37,11 @@ function attachEventListenerForAllElements(array, eventType, handler, options) {
     });
 }
 
+function onArrowClick(evt) {
+    let downArrowContainer = evt.path[2];
+    downArrowContainer.style.display = "none";
+}
+
 
 function handlePresentationCard(evt) {
     if (!xDown || !yDown) {
@@ -91,6 +96,11 @@ try {
     window.addEventListener('click', (mouseClick) => {
         let itemClicked = mouseClick.target;
         console.log("was clicked: " + itemClicked.className)
+
+        if (itemClicked.className === "down-btn" || itemClicked.className === "down-btn-img") {
+            console.log(mouseClick)
+            onArrowClick(mouseClick);
+        }
 
         if (itemClicked.className === "search-icon" || itemClicked.className === "search-icon-container") {
             let input = document.getElementById("search-input");
@@ -180,8 +190,15 @@ try {
             }
         }
 
+        let centerContainer = document.getElementsByClassName("center-container")[0];
+        let leftContainer = document.getElementsByClassName("left-container")[0];
 
         if (itemClicked.className === "continue-btn") {
+            centerContainer.style.filter = "blur(3px)";
+            centerContainer.style.opacity = "0.5";
+            leftContainer.style.filter = "blur(3px)";
+            leftContainer.style.opacity = "0.5";
+
             let x = itemClicked.parentElement;
             let y = x.parentElement;
             let z = y.parentElement;
@@ -219,10 +236,9 @@ try {
         }
 
     });
-}catch (e) {
+} catch (e) {
     console.log(e)
 }
-
 
 
 var xDown = null;
@@ -333,10 +349,11 @@ try {
 }
 
 
-try{
+try {
     let menuItems = document.getElementsByClassName("classic-item");
     attachEventListenerForAllElements(menuItems, "mouseover", setActive, false);
-}catch (e) {
+    attachEventListenerForAllElements(menuItems, "mouseleave", setInactive, false);
+} catch (e) {
     console.log(e)
 }
 
@@ -374,9 +391,18 @@ function setActive(event) {
     }
 }
 
-try{
+function setInactive(event) {
+    try {
+        let activeElement = document.getElementsByClassName("classic-item active");
+        activeElement[0].className = "classic-item";
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+try {
     let items = document.getElementsByClassName("center-cont-item");
-    attachEventListenerForAllElements(items, "mouseover",event => {
+    attachEventListenerForAllElements(items, "mouseover", event => {
         //if an item is active set it inactive
         try {
             let activeElement = document.getElementsByClassName("center-cont-item active");
@@ -414,7 +440,7 @@ try{
         }
 
     }, false);
-}catch (e){
+    } catch (e) {
     console.log(e)
 }
 

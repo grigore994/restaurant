@@ -3,6 +3,8 @@
    <head>
       <meta charset="UTF-8">
       <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <link rel="stylesheet" href="libraries/icons-fonts/fontawesome.css">
+      <link rel="stylesheet" href="libraries/icons-fonts/solid.css">
       <link href="styles.css" rel="stylesheet">
       <title>Order</title>
    </head>
@@ -199,7 +201,7 @@
 
             <section class="center-container column">
 
-               <div class="center-cont-item">
+               <div class="center-cont-item" onclick="showPopUp()">
                   <div class="item-title-row row">
                      <div class="order-item-title row">
                         PIETP DE RATA CU PIURE SI TRUFE
@@ -218,7 +220,6 @@
                   <div class="item-total-row row">
                      <div class="item-sign">NOU</div>
                      <div class="item-total-block row">
-                        <!--                        todo: implement functionality for btn-->
                         <div class="total-btn">
                            <button class="decrease-btn"><img src="img/asset-38.svg"></button>
                         </div>
@@ -233,13 +234,13 @@
 
                         <div class="cart-bag">
                            <img src="img/cartBag.svg" alt="cartBag.svg" class="inactive-card">
-                           <img src="img/asset-24.svg" alt="img/asset-24.svg" class="active-card">
+<!--                           <img src="img/asset-24.svg" alt="img/asset-24.svg" class="active-card">-->
                         </div>
                      </div>
                   </div>
                </div>
 
-               <div class="center-cont-item">
+               <div class="center-cont-item" onclick="showPopUp()">
                   <div class="item-title-row row">
                      <div class="item-title">
                         PIETP DE RATA CU PIURE SI TRUFE
@@ -274,13 +275,13 @@
 
                         <div class="cart-bag">
                            <img src="img/cartBag.svg" alt="cartBag.svg" class="inactive-card">
-                           <img src="img/asset-24.svg" alt="img/asset-24.svg" class="active-card">
+<!--                           <img src="img/asset-24.svg" alt="img/asset-24.svg" class="active-card">-->
                         </div>
                      </div>
                   </div>
                </div>
 
-               <div class="center-cont-item">
+               <div class="center-cont-item" onclick="showPopUp()">
                   <div class="item-title-row row">
                      <div class="item-title">
                         PIETP DE RATA CU PIURE SI TRUFE
@@ -311,13 +312,13 @@
 
                         <div class="cart-bag">
                            <img src="img/cartBag.svg" alt="cartBag.svg" class="inactive-card">
-                           <img src="img/asset-24.svg" alt="img/asset-24.svg" class="active-card">
+<!--                           <img src="img/asset-24.svg" alt="img/asset-24.svg" class="active-card">-->
                         </div>
                      </div>
                   </div>
                </div>
 
-               <div class="center-cont-item">
+               <div class="center-cont-item" onclick="showPopUp()">
                   <div class="item-title-row row">
                      <div class="item-title">
                         PIETP DE RATA CU PIURE SI TRUFE
@@ -348,13 +349,13 @@
 
                         <div class="cart-bag">
                            <img src="img/cartBag.svg" alt="cartBag.svg" class="inactive-card">
-                           <img src="img/asset-24.svg" alt="img/asset-24.svg" class="active-card">
+<!--                           <img src="img/asset-24.svg" alt="img/asset-24.svg" class="active-card">-->
                         </div>
                      </div>
                   </div>
                </div>
 
-               <div class="center-cont-item">
+               <div class="center-cont-item" onclick="showPopUp()">
                   <div class="item-title-row row">
                      <div class="item-title">
                         PIETP DE RATA CU PIURE SI TRUFE
@@ -385,7 +386,7 @@
 
                         <div class="cart-bag">
                            <img src="img/cartBag.svg" alt="cartBag.svg" class="inactive-card">
-                           <img src="img/asset-24.svg" alt="img/asset-24.svg" class="active-card">
+<!--                           <img src="img/asset-24.svg" alt="img/asset-24.svg" class="active-card">-->
                         </div>
                      </div>
                   </div>
@@ -748,6 +749,93 @@
 
             </section>
 
+         </div>
+         <div class="pop-up row" id="pop-up">
+            <div class="pop-up-area" onclick="hidePopUp()"></div>
+
+            <div class="pop-up-body">
+               <div class="pop-up-content column">
+                  <div class="close-btn-container" onclick="hidePopUp()">
+                     <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <div class="pop-up-img-container row">
+                     <!-- For mobile popUp -->
+                     <div class="nav-btn-row row">
+                        <div class="btn-container row">
+                           <div class="nav-back-btn" onclick="hidePopUp()">
+                              <i class="fa-solid fa-arrow-left"></i>
+                           </div>
+                        </div>
+
+                        <div class="btn-container row">
+                           <div class="nav-card-btn">
+                              <div class="count-item">2</div>
+                              <img src="img/cartBag.svg">
+                           </div>
+                        </div>
+                     </div>
+
+                     <img src="img/dish2.svg" alt="img/dish2.svg">
+                  </div>
+                  <div class="pop-up-title-row row">
+                     <div class="pop-up-title">
+                        Piept de rata cu piure si trufe
+                     </div>
+                     <div class="pop-up-price">MDL 220</div>
+                  </div>
+
+                  <div class="pop-up-description-row utensils-row row">
+
+                     <div class="desc-img-container column">
+                        <i class="fa-solid fa-utensils"></i>
+                     </div>
+
+                     <div class="pop-up-desc column">
+                        <div class="desc-title">Porție</div>
+                        <div class="desc-title-subtitle">Gramaj 350 G</div>
+                     </div>
+
+                  </div>
+
+                  <div class="pop-up-description-row book-row row">
+
+                     <div class="desc-img-container book column">
+                        <i class="fa-solid fa-book-open"></i>
+                     </div>
+
+                     <div class="pop-up-desc column">
+                        <div class="desc-title">Ingrediente</div>
+                        <div class="desc-title-subtitle">
+                           Piep de rata suculent, pregatit medium, servit cu piureu de
+                           cartofi trufati si cu adaos de parmezan, ornamentat cu popcorn de orez.
+                        </div>
+                     </div>
+
+                  </div>
+
+                  <div class="pop-up-btns-row row">
+                     <div class="column">
+                        <div class="ordered-item-qty row">
+                           <div class="total-btn">
+                              <button class="decrease-btn">-</button>
+                           </div>
+
+                           <div class="total-items-nr">
+                              <input type="number" value="1">
+                           </div>
+
+                           <div class="total-btn">
+                              <button class="increase-btn">+</button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="pop-up-btn-container column">
+                        <a href="" class="btn-green">Adaugă în coş</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
       <script src="index.js"></script>
