@@ -289,7 +289,8 @@ input, textarea {
 
 /*************************************End Zeroing *********************************************************************/
 .home-wrapper {
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     z-index: 5;
@@ -2417,7 +2418,7 @@ input.time-input {
     /*padding-top: 20px;*/
 
     /* todo: adapt to full screen view */
-    padding-top: 0.8rem;
+    padding-top: 5rem;
     padding-bottom: 2rem;
 }
 
@@ -2439,8 +2440,6 @@ input.time-input {
 .mobile-order-complete .subtotal-btn button {
     background-color: #526A30;
 }
-
-
 
 
 .home-mobile-wrapper {
@@ -4529,118 +4528,148 @@ input.time-input {
     }
 }
 
-
-
-
-
-
-@media (max-height: 100rem) {
-    .mobile-order-complete{
-        padding: 8rem 4rem 1.5rem 4rem;
+@media (max-height: 1050px) {
+    .data-totals{
+        padding-top: 0;
+        margin-top: -1rem;
     }
-    .data-container{
+}
+
+
+@media (max-height: 1000px) {
+    .data-container-title{
+        font-size:2.8rem;
+        padding-top: 8rem;
+    }
+
+    .mobile-order-complete {
+        /*padding: 8rem 4rem 1.5rem 4rem;*/
+        padding-top: 8rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .data-container {
         padding: 2rem 2rem;
         height: calc(100vh - 20rem);
     }
 
-    .details-container{
+    .details-container {
         padding-bottom: 2rem;
     }
 
-    .mobile-order-complete .subtotal-btn{
+    .mobile-order-complete .subtotal-btn {
         margin-top: 3.5rem;
     }
 }
 
-@media (max-height: 90rem){
-    .data-container-title{
-        font-size: 3rem;
+@media (max-height: 950px) {
+    .data-totals{
+        padding-top: 5rem;
+    }
+}
+
+
+
+@media (max-height: 900px) {
+    .data-container-title {
+        font-size: 2.8rem;
         padding-bottom: 2.5rem;
         padding-top: 5rem;
     }
 
-    .check-circle-container img{
+    .check-circle-container img {
         width: 6rem;
         height: 6rem;
     }
 
-    .details-title{
+    .details-title {
         font-size: 2.2rem;
     }
 
-    .details{
+    .details {
         font-size: 2.2rem;
+    }
+
+    .data-totals{
+        margin-top: 0;
+        padding-top: 5rem;
     }
 }
 
-@media (max-height: 80rem) {
+@media (max-height: 850px) {
     .data-container-title{
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-height: 800px) {
+    .data-container-title {
         font-size: 2.5rem;
         padding-bottom: 2.5rem;
         padding-top: 5rem;
     }
 
-    .check-circle-container img{
+    .check-circle-container img {
         width: 5rem;
         height: 5rem;
     }
 
-    .check-circle-container{
+    .check-circle-container {
         border: 1rem solid #D0D6C5;
     }
 
-    .details-title{
+    .details-title {
         font-size: 2rem;
     }
 
-    .details{
+    .details {
         font-size: 2rem;
     }
 
-    .data-totals{
+    .data-totals {
         padding-top: 0;
     }
 }
 
-@media (max-height: 75rem){
-    .data-container-title{
+@media (max-height: 750px) {
+    .data-container-title {
         font-size: 1.9rem;
         padding-bottom: 2.5rem;
         padding-top: 5rem;
     }
 
-    .details-title{
+    .details-title {
         font-size: 1.6rem;
     }
 
-    .details{
+    .details {
         font-size: 1.6rem;
     }
 
-    .data-totals{
+    .data-totals {
         padding-top: 4rem;
 
     }
 
-    .data-totals-title{
+    .data-totals-title {
         font-size: 1.6rem;
     }
 
-    .data-totals-sum{
+    .data-totals-sum {
         font-size: 1.8rem;
     }
 
-    .data-container{
+    .data-container {
         height: calc(100vh - 18rem);
     }
 
-    .mobile-order-complete .subtotal-btn{
+    .mobile-order-complete .subtotal-btn {
         margin-top: 2rem;
     }
 }
 
-@media (max-height: 70rem){
-    .data-totals{
+@media (max-height: 700px) {
+    .data-totals {
         margin-top: -1.5rem;
 
     }
