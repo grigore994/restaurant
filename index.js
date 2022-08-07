@@ -37,10 +37,60 @@ function attachEventListenerForAllElements(array, eventType, handler, options) {
     });
 }
 
-function onArrowClick(evt) {
-    let downArrowContainer = evt.path[2];
-    downArrowContainer.style.display = "none";
+// function onArrowClick(evt) {
+//     let downArrowContainer = evt.path[2];
+//     downArrowContainer.style.display = "none";
+// }
+
+function setActiveNamePresentation() {
+    let lateralMnuNamePresentation = document.getElementById("tank-menu-cat-name");
+    let namePresentation = document.getElementById("namePresentation");
+    let activePresentation = document.getElementsByClassName("mobile-presentation active row");
+    let activeLateralElement = document.getElementsByClassName("main-category active");
+
+    activePresentation[0].className = "mobile-presentation row";
+    namePresentation.className += " active"
+
+    activeLateralElement[0].className = "main-category";
+    lateralMnuNamePresentation.className += " active"
 }
+
+function setActiveFamilyPresentation() {
+    let lateralMnuFamilyPresentation = document.getElementById("tank-menu-cat-family");
+    let familyPresentation = document.getElementById("familyPresentation");
+    let activePresentation = document.getElementsByClassName("mobile-presentation active row");
+    let activeLateralElement = document.getElementsByClassName("main-category active");
+
+    activePresentation[0].className = "mobile-presentation row";
+    familyPresentation.className += " active"
+
+    activeLateralElement[0].className = "main-category";
+    lateralMnuFamilyPresentation.className += " active"
+}
+function setActiveBabyPresentation() {
+    let lateralMnuBabyPresentation = document.getElementById("tank-menu-cat-baby-friendly");
+    let babyPresentation = document.getElementById("babyPresentation");
+    let activePresentation = document.getElementsByClassName("mobile-presentation active row");
+    let activeLateralElement = document.getElementsByClassName("main-category active");
+
+    activePresentation[0].className = "mobile-presentation row";
+    babyPresentation.className += " active"
+
+    activeLateralElement[0].className = "main-category";
+    lateralMnuBabyPresentation.className += " active"
+}
+
+function setActivePersonalPresentation() {
+    let lateralMnuPersonalPresentation = document.getElementById("tank-menu-cat-personal");
+    let personalPresentation = document.getElementById("personalPresentation");
+    let activePresentation = document.getElementsByClassName("mobile-presentation active row");
+    let activeLateralElement = document.getElementsByClassName("main-category active");
+
+    activePresentation[0].className = "mobile-presentation row";
+    personalPresentation.className += " active"
+
+    activeLateralElement[0].className = "main-category";
+    lateralMnuPersonalPresentation.className += " active"}
 
 
 function handlePresentationCard(evt) {
@@ -63,8 +113,25 @@ function handlePresentationCard(evt) {
     } else {
         if (yDiff > 0) {
             /* down swipe */
-            let downArrowContainer = evt.path[2].children[3];
-            downArrowContainer.style.display = "none";
+
+            switch (evt.path[2].id) {
+                case "namePresentation": {
+                    setActiveFamilyPresentation();
+                    break;
+                }
+                case "familyPresentation": {
+                    setActiveBabyPresentation()
+                    break;
+                }
+                case "babyPresentation": {
+                    setActivePersonalPresentation();
+                    break;
+                }
+                case "personalPresentation": {
+                    setActiveNamePresentation()
+                    break;
+                }
+            }
         } else {
             /* up swipe */
         }
@@ -97,10 +164,10 @@ try {
         let itemClicked = mouseClick.target;
         console.log("was clicked: " + itemClicked.className)
 
-        if (itemClicked.className === "down-btn" || itemClicked.className === "down-btn-img") {
-            console.log(mouseClick)
-            onArrowClick(mouseClick);
-        }
+        // if (itemClicked.className === "down-btn" || itemClicked.className === "down-btn-img") {
+        //     console.log(mouseClick)
+        //     onArrowClick(mouseClick);
+        // }
 
         if (itemClicked.className === "search-icon" || itemClicked.className === "search-icon-container") {
             let input = document.getElementById("search-input");
@@ -123,29 +190,29 @@ try {
             itemClicked.className += " active";
         }
 
-        if (itemClicked.id === "tank-menu-cat-name") {
-            let activeElement = document.getElementsByClassName("mobile-presentation active");
-            activeElement[0].className = "mobile-presentation";
-            document.getElementById("namePresentation").className += " active";
-        }
-
-        if (itemClicked.id === "tank-menu-cat-family") {
-            let activeElement = document.getElementsByClassName("mobile-presentation active");
-            activeElement[0].className = "mobile-presentation";
-            document.getElementById("familyPresentation").className += " active";
-        }
-
-        if (itemClicked.id === "tank-menu-cat-baby-friendly") {
-            let activeElement = document.getElementsByClassName("mobile-presentation active");
-            activeElement[0].className = "mobile-presentation";
-            document.getElementById("babyPresentation").className += " active";
-        }
-
-        if (itemClicked.id === "tank-menu-cat-personal") {
-            let activeElement = document.getElementsByClassName("mobile-presentation active");
-            activeElement[0].className = "mobile-presentation";
-            document.getElementById("personalPresentation").className += " active";
-        }
+        // if (itemClicked.id === "tank-menu-cat-name") {
+        //     let activeElement = document.getElementsByClassName("mobile-presentation active");
+        //     activeElement[0].className = "mobile-presentation";
+        //     document.getElementById("namePresentation").className += " active";
+        // }
+        //
+        // if (itemClicked.id === "tank-menu-cat-family") {
+        //     let activeElement = document.getElementsByClassName("mobile-presentation active");
+        //     activeElement[0].className = "mobile-presentation";
+        //     document.getElementById("familyPresentation").className += " active";
+        // }
+        //
+        // if (itemClicked.id === "tank-menu-cat-baby-friendly") {
+        //     let activeElement = document.getElementsByClassName("mobile-presentation active");
+        //     activeElement[0].className = "mobile-presentation";
+        //     document.getElementById("babyPresentation").className += " active";
+        // }
+        //
+        // if (itemClicked.id === "tank-menu-cat-personal") {
+        //     let activeElement = document.getElementsByClassName("mobile-presentation active");
+        //     activeElement[0].className = "mobile-presentation";
+        //     document.getElementById("personalPresentation").className += " active";
+        // }
 
 
         if (itemClicked.className === "sub-category") {
@@ -440,7 +507,7 @@ try {
         }
 
     }, false);
-    } catch (e) {
+} catch (e) {
     console.log(e)
 }
 

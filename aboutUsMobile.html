@@ -44,22 +44,22 @@
             <section class="tank-menu column">
                <div class="mnu-main-categories-list tank-menu-cat-list row">
 
-                  <a class="main-category active" id="tank-menu-cat-name">
+                  <a class="main-category active" id="tank-menu-cat-name" onclick="setActiveNamePresentation()">
                      Restaurant
                      <div class="bottom-line"></div>
                   </a>
 
-                  <a class="main-category" id="tank-menu-cat-family">
+                  <a class="main-category" id="tank-menu-cat-family" onclick="setActiveFamilyPresentation()">
                      Family
                      <div class="bottom-line"></div>
                   </a>
 
-                  <a class="main-category" id="tank-menu-cat-baby-friendly">
+                  <a class="main-category" id="tank-menu-cat-baby-friendly" onclick="setActiveBabyPresentation()">
                      Baby Friendly
                      <div class="bottom-line"></div>
                   </a>
 
-                  <a class="main-category" id="tank-menu-cat-personal">
+                  <a class="main-category" id="tank-menu-cat-personal" onclick="setActivePersonalPresentation()">
                      Personal
                      <div class="bottom-line"></div>
                   </a>
@@ -102,11 +102,13 @@
                      </div>
                   </div>
 
-                  <div class="down-btn-container row">
+
+                  <div class="down-btn-container row" onclick="setActiveFamilyPresentation()">
                      <div class="down-btn row">
                         <img src="img/asset-41.svg" class="down-btn-img">
                      </div>
                   </div>
+
                </section>
 
                <section class="mobile-presentation row" id="familyPresentation">
@@ -141,7 +143,7 @@
                      </div>
                   </div>
 
-                  <div class="down-btn-container row">
+                  <div class="down-btn-container row" onclick="setActiveBabyPresentation()">
                      <div class="down-btn row">
                         <img src="img/asset-41.svg">
                      </div>
@@ -180,7 +182,7 @@
                      </div>
                   </div>
 
-                  <div class="down-btn-container row">
+                  <div class="down-btn-container row" onclick="setActivePersonalPresentation()">
                      <div class="down-btn row">
                         <img src="img/asset-41.svg">
                      </div>
@@ -219,7 +221,7 @@
                      </div>
                   </div>
 
-                  <div class="down-btn-container row">
+                  <div class="down-btn-container row" onclick="setActiveNamePresentation()">
                      <div class="down-btn row">
                         <img src="img/asset-41.svg">
                      </div>
