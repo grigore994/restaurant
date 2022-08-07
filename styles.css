@@ -3567,11 +3567,11 @@ input.time-input {
     .swiper3 .swiper-pagination {
         /*position: relative;*/
         position: absolute;
-        bottom: -45px;
+        bottom: -25px;
     }
 
     .news-container .swiper3 .swiper-pagination {
-        bottom: -10px;
+        bottom: 5px;
     }
 
     .swiper3 .swiper-pagination-bullet {
@@ -3667,7 +3667,7 @@ input.time-input {
     }
 
     .reviews-mobile-news {
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     .news-title p {
@@ -4529,7 +4529,7 @@ input.time-input {
 }
 
 @media (max-height: 1050px) {
-    .data-totals{
+    .data-totals {
         padding-top: 0;
         margin-top: -1rem;
     }
@@ -4537,8 +4537,8 @@ input.time-input {
 
 
 @media (max-height: 1000px) {
-    .data-container-title{
-        font-size:2.8rem;
+    .data-container-title {
+        font-size: 2.8rem;
         padding-top: 8rem;
     }
 
@@ -4563,12 +4563,167 @@ input.time-input {
 }
 
 @media (max-height: 950px) {
-    .data-totals{
+    .data-totals {
         padding-top: 5rem;
     }
 }
 
+/* iPad Air */
+@media screen and (max-width: 995px), screen and (max-height: 1190px) {
+    .reviews-mobile-title {
+        padding: 3rem 2rem;
+    }
 
+    .reviews-slider-container .mobile-client-review {
+        height: 32vh;
+
+    }
+
+    .news-container .mobile-client-review {
+        max-height: 28vh;
+    }
+
+    .client-review-title {
+        padding-bottom: 1.5rem;
+    }
+
+    .client-review-paragraph {
+        padding-bottom: 1rem;
+    }
+
+    .swiper3 .swiper-pagination {
+    }
+}
+
+
+/* iPad & iPad Mini */
+@media screen and (max-width: 800px), screen and (max-height: 1050px) {
+    .reviews-mobile-title {
+        padding-top: 1rem;
+    }
+
+    .reviews-mobile-news {
+        padding: 3rem 2rem;
+    }
+}
+
+/*iphone XR & iPhone & ProMax & Galaxy S22 Ultra*/
+@media screen and (max-width: 420px), screen and (max-height: 920px) {
+    .reviews-mobile-title {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .reviews-mobile-news {
+        padding: 2rem 2rem;
+    }
+
+    .reviews-slider-container .mobile-client-review {
+        height: 31vh;
+
+    }
+
+    .news-container .mobile-client-review {
+        max-height: 29vh;
+    }
+
+    .client-review-title {
+        padding-bottom: 1rem;
+    }
+
+    .client-review-paragraph {
+        font-size: 1.2rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .news-container .swiper3 .swiper-pagination {
+        bottom: 1.4rem;
+    }
+
+    .swiper3 .swiper-pagination {
+    }
+}
+
+
+/* iphone Pro*/
+@media screen and (max-width: 400px),
+screen and (max-height: 850px) {
+    .reviews-mobile-title{
+        font-size: 2rem;
+    }
+
+    .client-review-title{
+        font-size: 1.7rem;
+    }
+
+    .client-review-paragraph{
+        padding-bottom: 0.5rem;
+    }
+
+    .client-review-ratings{
+        padding-top: 0;
+    }
+
+    .ratings-star i {
+        font-size: 1.4rem;
+    }
+}
+
+/* iphone X*/
+@media screen and (max-width: 380px),
+screen and (max-height: 815px) {
+    .reviews-mobile-title {
+        margin-top: -2rem;
+        padding-bottom: 1rem;
+    }
+
+    .reviews-mobile-news {
+        margin-top: 0;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .reviews-slider-container .mobile-client-review {
+        height: 35vh;
+
+    }
+
+    .news-container .mobile-client-review {
+        max-height: 32vh;
+    }
+}
+
+/* iphone 6/7/8 Plus */
+@media screen and (max-width: 415px),
+screen and (max-height: 740px) {
+    .client-review-paragraph{
+        font-size: 1.1rem;
+    }
+
+    .reviews-slider-container .mobile-client-review {
+        height: 33vh;
+    }
+}
+
+/* iphone 6/7/8 & iPhone SE */
+@media screen and (max-width: 375px),
+screen and (max-height: 670px) {
+    .reviews-mobile-title{
+    }
+
+    .client-review-title{
+        padding-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .client-review-paragraph{
+        font-size: 1rem;
+    }
+
+    .news-container .mobile-client-review {
+        max-height: 28vh;
+    }
+}
 
 @media (max-height: 900px) {
     .data-container-title {
@@ -4590,14 +4745,14 @@ input.time-input {
         font-size: 2.2rem;
     }
 
-    .data-totals{
+    .data-totals {
         margin-top: 0;
         padding-top: 5rem;
     }
 }
 
 @media (max-height: 850px) {
-    .data-container-title{
+    .data-container-title {
         font-size: 2.6rem;
     }
 }
@@ -4674,6 +4829,7 @@ input.time-input {
 
     }
 }
+
 
 
 
