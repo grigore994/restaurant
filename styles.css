@@ -4601,8 +4601,7 @@ input.time-input {
 
 
 /* iPad & iPad Mini */
-@media screen and (max-width: 800px),
-screen and (max-height: 1050px) {
+@media screen and (max-width: 800px), screen and (max-height: 1050px) {
     .reviews-mobile-title {
         padding-top: 1rem;
     }
@@ -4638,9 +4637,9 @@ screen and (max-height: 1050px) {
     }
 }
 
+
 /*iphone XR & iPhone & ProMax & Galaxy S22 Ultra*/
-@media screen and (max-width: 420px),
-screen and (max-height: 920px) {
+@media screen and (max-width: 420px), screen and (max-height: 920px) {
     .reviews-mobile-title {
         padding-top: 1rem;
         padding-bottom: 2rem;
@@ -4681,19 +4680,17 @@ screen and (max-height: 920px) {
     }
 
     .about-us-mobile-wrapper .mobile-presentation {
-        height: 68vh;
+        height: 70vh;
     }
 
     .desc-paragraph {
         padding-bottom: 1rem;
-        font-size: 1.2rem;
+        font-size: 1.27rem;
     }
 }
 
-
 /* iphone Pro*/
-@media screen and (max-width: 400px),
-screen and (max-height: 850px) {
+@media screen and (max-width: 400px), screen and (max-height: 850px) {
     .reviews-mobile-title {
         font-size: 2rem;
     }
@@ -4715,12 +4712,15 @@ screen and (max-height: 850px) {
     }
 
     .about-us-mobile-wrapper .mobile-presentation {
-        height: 66vh;
+        /*height: 100vh;*/
+        /*height: 66vh;*/
+        height: 70vh;
     }
 
     .mobile-presentation .presentation-img img {
         height: 12rem;
-        margin-top: -1rem;
+        margin-top: 0rem;
+        /*margin-top: -1rem;*/
     }
 
     .about-us-mobile-wrapper .mobile-presentation-title {
@@ -4734,13 +4734,13 @@ screen and (max-height: 850px) {
     }
 
     .desc-paragraph {
-        font-size: 1.1rem;
+        font-size: 1.17rem;
+        /*font-size: 1.1rem;*/
     }
 }
 
 /* iphone X*/
-@media screen and (max-width: 380px),
-screen and (max-height: 815px) {
+@media screen and (max-width: 380px), screen and (max-height: 815px) {
     .reviews-mobile-title {
         margin-top: -2rem;
         padding-bottom: 1rem;
@@ -4763,8 +4763,7 @@ screen and (max-height: 815px) {
 }
 
 /* iphone 6/7/8 Plus */
-@media screen and (max-width: 415px),
-screen and (max-height: 740px) {
+@media screen and (max-width: 415px), screen and (max-height: 740px) {
     .client-review-paragraph {
         font-size: 1.1rem;
     }
@@ -4792,10 +4791,14 @@ screen and (max-height: 740px) {
         padding-bottom: 1rem;
         font-size: 2.5rem;
     }
+
+    .desc-paragraph{
+        font-size: 1.15rem;
+    }
 }
 
 /* iphone 6/7/8 & iPhone SE */
-@media screen and (max-width: 375px), screen and (max-height: 670px) {
+@media screen and (max-width: 380px), screen and (max-height: 670px) {
     .reviews-mobile-title {
     }
 
@@ -4812,27 +4815,31 @@ screen and (max-height: 740px) {
         max-height: 28vh;
     }
 
-    .about-us-mobile-wrapper .tank-menu-cat-list{
+    .about-us-mobile-wrapper .tank-menu-cat-list {
         margin-left: 0;
     }
 
-    .about-us-mobile-wrapper .mobile-mnu-header{
+    .about-us-mobile-wrapper .mobile-mnu-header {
         margin-top: -2rem;
     }
 
-    .mobile-presentation .presentation-img img{
+    .mobile-presentation .presentation-img img {
         height: 10rem;
     }
 
-    .desc-paragraph{
+    .desc-paragraph {
         font-size: 1rem;
     }
 
-    .down-btn{
+    .down-btn {
         width: 5rem;
         height: 5rem;
     }
 }
+
+
+
+
 
 @media (max-height: 900px) {
     .data-container-title {
