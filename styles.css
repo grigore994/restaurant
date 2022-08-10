@@ -1612,6 +1612,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .ordered-items-price {
     font-size: 15px;
+    line-height: 170%;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -2211,6 +2212,7 @@ input.time-input {
     padding-bottom: 15px;
     color: var(--dark-green);
     font-weight: bold;
+    line-height: 100%;
 }
 
 .mobile-order-wrapper .right-conteiner-block-title {
