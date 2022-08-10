@@ -5,8 +5,6 @@ function hidePopUp() {
 }
 
 function showPopUp() {
-    console.log('show popup')
-    // let popUp = document.getElementsByClassName('pop-up')[0];
     let popUp = document.getElementById('pop-up');
     popUp.style.opacity = '1';
     popUp.style.visibility = 'visible';
@@ -36,11 +34,6 @@ function attachEventListenerForAllElements(array, eventType, handler, options) {
         element.addEventListener(eventType, handler, false);
     });
 }
-
-// function onArrowClick(evt) {
-//     let downArrowContainer = evt.path[2];
-//     downArrowContainer.style.display = "none";
-// }
 
 function setActiveNamePresentation() {
     let lateralMnuNamePresentation = document.getElementById("tank-menu-cat-name");
@@ -98,11 +91,11 @@ function handlePresentationCard(evt) {
         return;
     }
 
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
+    let xUp = evt.touches[0].clientX;
+    let yUp = evt.touches[0].clientY;
 
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
+    let xDiff = xDown - xUp;
+    let yDiff = yDown - yUp;
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
         if (xDiff > 0) {
@@ -139,7 +132,7 @@ function handlePresentationCard(evt) {
     /* reset values */
     xDown = null;
     yDown = null;
-};
+}
 
 try {
     let mobilePresentation = document.getElementsByClassName("mobile-presentation");
@@ -162,12 +155,6 @@ try {
 try {
     window.addEventListener('click', (mouseClick) => {
         let itemClicked = mouseClick.target;
-        console.log("was clicked: " + itemClicked.className)
-
-        // if (itemClicked.className === "down-btn" || itemClicked.className === "down-btn-img") {
-        //     console.log(mouseClick)
-        //     onArrowClick(mouseClick);
-        // }
 
         if (itemClicked.className === "search-icon" || itemClicked.className === "search-icon-container") {
             let input = document.getElementById("search-input");
@@ -189,31 +176,6 @@ try {
             activeElement[0].className = "mobile-type-category";
             itemClicked.className += " active";
         }
-
-        // if (itemClicked.id === "tank-menu-cat-name") {
-        //     let activeElement = document.getElementsByClassName("mobile-presentation active");
-        //     activeElement[0].className = "mobile-presentation";
-        //     document.getElementById("namePresentation").className += " active";
-        // }
-        //
-        // if (itemClicked.id === "tank-menu-cat-family") {
-        //     let activeElement = document.getElementsByClassName("mobile-presentation active");
-        //     activeElement[0].className = "mobile-presentation";
-        //     document.getElementById("familyPresentation").className += " active";
-        // }
-        //
-        // if (itemClicked.id === "tank-menu-cat-baby-friendly") {
-        //     let activeElement = document.getElementsByClassName("mobile-presentation active");
-        //     activeElement[0].className = "mobile-presentation";
-        //     document.getElementById("babyPresentation").className += " active";
-        // }
-        //
-        // if (itemClicked.id === "tank-menu-cat-personal") {
-        //     let activeElement = document.getElementsByClassName("mobile-presentation active");
-        //     activeElement[0].className = "mobile-presentation";
-        //     document.getElementById("personalPresentation").className += " active";
-        // }
-
 
         if (itemClicked.className === "sub-category") {
             let activeElement = document.getElementsByClassName("sub-category active");
@@ -308,12 +270,11 @@ try {
 }
 
 
-var xDown = null;
-var yDown = null;
+let xDown = null;
+let yDown = null;
 
 function getTouches(evt) {
-    return evt.touches // ||             // browser API
-    // evt.originalEvent.touches; // jQuery
+    return evt.touches
 }
 
 
@@ -328,11 +289,11 @@ function handleTouchMove(evt) {
         return;
     }
 
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
+    let xUp = evt.touches[0].clientX;
+    let yUp = evt.touches[0].clientY;
 
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
+    let xDiff = xDown - xUp;
+    let yDiff = yDown - yUp;
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant*/
         if (xDiff > 0) {
@@ -343,14 +304,11 @@ function handleTouchMove(evt) {
     } else {
         if (yDiff > 0) {
             /* down swipe */
-            console.log('swiped down')
             document.getElementById('bottom-options').style.display = 'none';
             document.getElementById('home-intro').style.minHeight = 'calc(100vh - 100vh)';
             document.getElementById('home-intro').style.transition = 'min-height 0.3s ease-in-out 0.3s';
-            // document.getElementById('background-img').style.display = "none";
             document.getElementById('bottom-background-img').style.display = "none";
             document.getElementById('top-background-img').style.display = "none";
-            // document.getElementById('background-img').style.transition = 'top 0.3s ease-in-out 0.3s';
             document.getElementById("main-mnu-header").style.filter = "none"
             document.getElementById("mob-food-cat-wrapper").style.filter = "none"
             document.getElementById("mobile-food-cat").style.filter = "none"
@@ -362,8 +320,6 @@ function handleTouchMove(evt) {
             document.getElementById('icon').style.color = '#4C4C4C';
         } else {
             /* up swipe */
-            console.log('swiped up')
-            // document.getElementById('background-img').style.display = "inherit";
             document.getElementById('top-background-img').style.display = "inherit";
             document.getElementById('bottom-background-img').style.display = "inherit";
             document.getElementById('bottom-options').style.display = 'inherit';
@@ -385,7 +341,7 @@ function handleTouchMove(evt) {
     /* reset values */
     xDown = null;
     yDown = null;
-};
+}
 
 try {
     let orderForm = document.getElementById("orderForm");
@@ -510,91 +466,3 @@ try {
 } catch (e) {
     console.log(e)
 }
-
-
-// try {
-//     const swiper = new Swiper('.swiper', {
-//         // Optional parameters
-//         direction: 'horizontal',
-//         loop: true,
-//         spaceBetween: 20,
-//         slidesPerView: 'auto',
-//     });
-// } catch (e) {
-//     console.log(e)
-// }
-//
-// try {
-//     const swiper2 = new Swiper('.swiper2', {
-//         // modules:[Pagination],
-//         // Optional parameters
-//         direction: 'horizontal',
-//         // loop: true,
-//         // spaceBetween:20,
-//         slidesPerView: 1,
-//         centeredSlides: true,
-//         // fill: 'row',
-//
-//         pagination: {
-//             el: '.swiper-pagination',
-//             type: 'bullets',
-//         },
-//
-//         autoplay: {
-//             delay: 3000,
-//         },
-//     });
-// } catch (e) {
-//     console.log(e)
-// }
-//
-// try {
-//     const swiper3 = new Swiper('.swiper3', {
-//         // modules:[Pagination],
-//         // Optional parameters
-//         direction: 'horizontal',
-//         // loop: true,
-//         spaceBetween: 20,
-//         slidesPerView: 1,
-//         centeredSlides: true,
-//         // fill: 'row',
-//
-//         pagination: {
-//             el: '.swiper-pagination',
-//             type: 'bullets',
-//         },
-//
-//         // autoplay: {
-//         //     delay: 3000,
-//         // },
-//     });
-// } catch (e) {
-//     console.log(e)
-// }
-//
-// try {
-//     const swiper4 = new Swiper('.swiper4', {
-//         direction: 'horizontal',
-//         // loop: true,
-//         spaceBetween: 20,
-//         slidesPerView: 'auto',
-//     });
-// } catch (e) {
-//     console.log(e)
-// }
-//
-// try {
-//     const swiper5 = new Swiper('.swiper5', {
-//         direction: 'horizontal',
-//         spaceBetween: 20,
-//         slidesPerView: 1,
-//         centeredSlides: true,
-//
-//         pagination: {
-//             el: '.swiper-pagination',
-//             type: 'bullets',
-//         },
-//     });
-// } catch (e) {
-//     console.log(e)
-// }
